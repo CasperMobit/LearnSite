@@ -1,0 +1,12 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;}
+.breadcrumb {
+    font-size: 0.8em;}
+.lead {
+    font-weight: lighter;}
+.nav-link {
+    color: white;}
+.nav-link:hover {
+    color: lightgray;}
+.navbar-brand:hover {
+    color: lightgrey !important;}

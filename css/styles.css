@@ -1,0 +1,9 @@
+@import url("color.css");
+@import url("typeface.css");
+
+.breadcrumb {
+    width: 100%;}
+.wrapper {
+    margin: 10pt auto 60pt auto;
+    text-align: left;
+    width: 60%;}
