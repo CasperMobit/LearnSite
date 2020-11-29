@@ -1,0 +1,72 @@
+$color_html-syntax: rgb(177, 177, 177);
+$color_html-tag: rgb(0, 89, 255);
+$color_html-attr-name: rgb(0, 174, 255);
+$color_html-attr-value: rgb(255, 102, 0);
+$color_text: #000;
+
+$header_height: 40pt;
+$header_font-size: 16pt;
+$header_padding: ($header_height - $header_font-size) / 2;
+
+$padding_page: 250pt;
+
+@mixin size($width, $height) {
+    height: $height;
+    width: $width;
+}
+
+* {
+    margin: 0;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header {
+    background: rgb(216, 216, 216);
+    padding-top: $header_padding;
+    padding-bottom: $header_padding;
+    padding-left: $padding_page;
+    p {
+        font-size: $header_font-size;
+    }
+}
+.wrapper {
+    margin-right: $padding_page;
+    margin-left: $padding_page;
+    margin-top: 20pt;
+    h1 {
+        margin-bottom: 10pt;
+    }
+    h2 {
+        margin-bottom: 10pt;
+    }
+    h3 {
+        margin-top: 10pt;}
+}
+.codeBlock {
+    background: rgb(240, 240, 240);
+    border-radius: 5pt;
+    color: $color_html-syntax;
+    line-height: 1.5;
+    padding: 16pt;
+    div {
+        border-left: solid;
+        border-width: 1pt;
+        border-color: $color_html-syntax;
+    }
+    .ind1, .ind2 {
+        padding-left: 16pt;
+    }
+    .tag {
+        color: $color_html-tag;
+    }
+    .attrName {
+        color: $color_html-attr-name;
+    }
+    .attrValue {
+        color: $color_html-attr-value;
+    }
+    .text {
+        color: $color_text;
+    }
+}
