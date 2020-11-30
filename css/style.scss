@@ -1,14 +1,15 @@
-$color_html-syntax: rgb(177, 177, 177);
-$color_html-tag: rgb(0, 89, 255);
-$color_html-attr-name: rgb(0, 174, 255);
-$color_html-attr-value: rgb(255, 102, 0);
+$color_code: rgb(177, 177, 177);
+$color_code-background: rgb(240, 240, 240);
+$color_html-name: rgb(0, 89, 255);
+$color_html-attr: rgb(0, 174, 255);
+$color_html-string: rgb(255, 102, 0);
 $color_text: #000;
 
 $header_height: 40pt;
 $header_font-size: 16pt;
 $header_padding: ($header_height - $header_font-size) / 2;
 
-$padding_page: 250pt;
+$padding_page: 200pt;
 
 @mixin size($width, $height) {
     height: $height;
@@ -17,9 +18,11 @@ $padding_page: 250pt;
 
 * {
     margin: 0;
+    padding: 0;
 }
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 100px;
 }
 header {
     background: rgb(216, 216, 216);
@@ -41,32 +44,58 @@ header {
         margin-bottom: 10pt;
     }
     h3 {
-        margin-top: 10pt;}
+        margin-top: 10pt;
+    }
 }
 .codeBlock {
-    background: rgb(240, 240, 240);
+    background: $color_code-background;
     border-radius: 5pt;
-    color: $color_html-syntax;
     line-height: 1.5;
+    margin-bottom: 10pt;
     padding: 16pt;
-    div {
+    width: fit-content;
+    .ind1, .ind2 {
         border-left: solid;
         border-width: 1pt;
-        border-color: $color_html-syntax;
-    }
-    .ind1, .ind2 {
+        border-color: $color_code;
         padding-left: 16pt;
     }
+    ul {
+        list-style: none;
+        ul {
+            border-left: solid;
+            border-width: 1pt;
+            border-color: $color_code;
+            padding-left: 16pt;
+        }
+    }
+}
+.html {
     .tag {
-        color: $color_html-tag;
+        color: $color_code;
     }
-    .attrName {
-        color: $color_html-attr-name;
+    .name {
+        color: $color_html-name;
     }
-    .attrValue {
-        color: $color_html-attr-value;
+    .attr {
+        color: $color_html-attr;
     }
-    .text {
-        color: $color_text;
+    .string {
+        color: $color_html-string;
+    }
+}
+#CSS-Selectors {
+    background: rgb(212, 212, 212);
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+    th {
+        border-bottom: 2pt solid #000;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    td:first-child {
+        font-size: 10pt;
+        text-transform: uppercase;
     }
 }
