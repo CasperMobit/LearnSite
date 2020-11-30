@@ -37,11 +37,17 @@ header p {
   margin-top: 10pt;
 }
 
+.wrapper p {
+  margin-bottom: 10pt;
+}
+
 .codeBlock {
   background: #f0f0f0;
   border-radius: 5pt;
+  float: right;
   line-height: 1.5;
   margin-bottom: 10pt;
+  margin-left: 10pt;
   padding: 16pt;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -93,6 +99,10 @@ header p {
   border-bottom: 2pt solid #000;
   font-weight: 500;
   text-transform: uppercase;
+}
+
+#CSS-Selectors td {
+  vertical-align: top;
 }
 
 #CSS-Selectors td:first-child {

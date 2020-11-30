@@ -46,12 +46,17 @@ header {
     h3 {
         margin-top: 10pt;
     }
+    p {
+        margin-bottom: 10pt;
+    }
 }
 .codeBlock {
     background: $color_code-background;
     border-radius: 5pt;
+    float: right;
     line-height: 1.5;
     margin-bottom: 10pt;
+    margin-left: 10pt;
     padding: 16pt;
     width: fit-content;
     .ind1, .ind2 {
@@ -93,6 +98,9 @@ header {
         border-bottom: 2pt solid #000;
         font-weight: 500;
         text-transform: uppercase;
+    }
+    td {
+        vertical-align: top;
     }
     td:first-child {
         font-size: 10pt;
