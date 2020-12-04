@@ -3,7 +3,12 @@
 <?php require('components/stdMOF.html');?>
 
 <header>
-    <p class="title">LearnSite</p>
+    <div class="siteName">LearnSite</div>
+    <nav>
+        <ul>
+            <li>Home</li>
+        </ul>
+    </nav>
 </header>
 
 <div class="wrapper">

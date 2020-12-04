@@ -9,19 +9,27 @@ body {
 }
 
 header {
-  background: #d8d8d8;
+  background-color: #43467F;
+  color: #FFFFFF;
   padding-top: 12pt;
   padding-bottom: 12pt;
-  padding-left: 200pt;
+  padding-left: 200px;
 }
 
-header p {
+header .siteName {
   font-size: 16pt;
 }
 
+header ul {
+  list-style: none;
+  float: right;
+}
+
 .wrapper {
-  margin-right: 200pt;
-  margin-left: 200pt;
+  background-color: #F9FAFB;
+  color: #212B36;
+  margin-right: 200px;
+  margin-left: 200px;
   margin-top: 20pt;
 }
 
@@ -42,7 +50,7 @@ header p {
 }
 
 .codeBlock {
-  background: #f0f0f0;
+  background: #DFE3E8;
   border-radius: 5pt;
   float: right;
   line-height: 1.5;
