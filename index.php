@@ -13,6 +13,25 @@
 
 <div class="wrapper">
 
+    <table>
+        <tr>
+            <td>Lighter</td>
+            <td>#F9FAFB</td>
+        </tr>
+        <tr>
+            <td>Light</td>
+            <td>#F4F6F8</td>
+        </tr>
+        <tr>
+            <td>Sky</td>
+            <td>#DFE3E8</td>
+        </tr>
+        <tr>
+            <td>Dark</td>
+            <td>#C4CDD5</td>
+        </tr>
+    </table>
+
     <h1>HTML</h1>
     <h2>1 Structure</h2>
 
