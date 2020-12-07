@@ -9,295 +9,341 @@ $header_height: 40pt;
 $header_font-size: 16pt;
 $header_padding: ($header_height - $header_font-size) / 2;
 
-$padding_page: 200px;
+$padding_page: 500px;
 
 @function color($name, $shade: null) {
-    $color: #F037C1;
-    // Defined error codes
-    $error_name: "The color '#{$name}' doesn't exist";
-    $error_shade: "The color '#{$name}' doesn't have a shade named '#{$shade}'";
-    // Assign main colors
-    @if $shade == null {
-        @if $name == 'main' {
-            $color: #43467F;
-        } @else if $name == 'sky' {
-            $color: #DFE3E8;
-        } @else if $name == 'ink' {
-            $color: #212B36;
-        } @else if $name == 'purple' {
-            $color: #9C6ADE;
-        } @else if $name == 'indigo' {
-            $color: #5C6AC4;
-        } @else if $name == 'blue' {
-            $color: #006FBB;
-        } @else if $name == 'teal' {
-            $color: #47C1BF;
-        } @else if $name == 'green' {
-            $color: #50B83C;
-        } @else if $name == 'yellow' {
-            $color: #EEC200;
-        } @else if $name == 'orange' {
-            $color: #F49342;
-        } @else if $name == 'red' {
-            $color: #DE3618;
-        }
-        // Add extra colors here:
-        @else if $name == 'white' {
-            $color: #FFFFFF;
-        } @else {
-            @error $error_name;
-        }
-    }
-    // Assign shades of color
-    @else {
-        @if $name == 'main' {
-            @if $shade == 'light' {
-                $color: #B3B5CB;
-            } @else if $shade == 'dark' {
-                $color: #1C2260;
-            } @else if $shade == 'darker' {
-                $color: #00044C;
-            } @else {
-                @error $error_shade;
-            }
-        } @else if $name == 'sky' {
-            @if $shade == 'lighter' {
-                $color: #F9FAFB;
-            } @else if $shade == 'light' {
-                $color: #F4F6F8;
-            } @else if $shade == 'dark' {
-                $color: #C4CDD5;
-            } @else {
-                @error $error_shade;
-            }
-        } @else if $name == 'ink' {
-            @if $shade == 'lightest' {
-                $color: #919EAB;
-            } @else if $shade == 'lighter' {
-                $color: #637381;
-            } @else if $shade == 'light' {
-                $color: #454F5B;
-            } @else {
-                @error $error_shade;
-            }
-        } @else if $name == 'purple' {
-            @if $shade == 'lighter' {
-                $color: #F6F0FD;
-            } @else if $shade == 'light' {
-                $color: #E3D0FF;
-            } @else if $shade == 'dark' {
-                $color: #50248F;
-            } @else if $shade == 'darker' {
-                $color: #230051;
-            } @else if $shade == 'text' {
-                $color: #50495A;
-            } @else {
-                @error $error_shade;
-            }
-        } @else if $name == 'indigo' {
-            @if $shade == 'lighter' {
-                $color: #F4F5FA;
-            } @else if $shade == 'light' {
-                $color: #B3BCF5;
-            } @else if $shade == 'dark' {
-                $color: #202E78;
-            } @else if $shade == 'darker' {
-                $color: #000639;
-            } @else if $shade == 'text' {
-                $color: #3E4155;
-            } @else {
-                @error $error_shade;
-            }
-        } @else if $name == 'blue' {
-            @if $shade == 'lighter' {
-                $color: #F4F5FA;
-            } @else if $shade == 'light' {
-                $color: #B3BCF5;
-            } @else if $shade == 'dark' {
-                $color: #202E78;
-            } @else if $shade == 'darker' {
-                $color: #000639;
-            } @else if $shade == 'text' {
-                $color: #3E4155;
-            } @else {
-                @error $error_shade;
-            }
-        } @else if $name == 'teal' {
-            @if $shade == 'lighter' {
-                $color: #E0F5F5;
-            } @else if $shade == 'light' {
-                $color: #B7ECEC;
-            } @else if $shade == 'dark' {
-                $color: #00848E;
-            } @else if $shade == 'darker' {
-                $color: #003135;
-            } @else if $shade == 'text' {
-                $color: #405352;
-            } @else {
-                @error $error_shade;
-            }
-        } @else if $name == 'green' {
-            @if $shade == 'lighter' {
-                $color: #E3F1DF;
-            } @else if $shade == 'light' {
-                $color: #BBE5B3;
-            } @else if $shade == 'dark' {
-                $color: #108043;
-            } @else if $shade == 'darker' {
-                $color: #173630;
-            } @else if $shade == 'text' {
-                $color: #414F3E;
-            } @else {
-                @error $error_shade;
-            }
-        } @else if $name == 'yellow' {
-            @if $shade == 'lighter' {
-                $color: #FCF1CD;
-            } @else if $shade == 'light' {
-                $color: #FFEA8A;
-            } @else if $shade == 'dark' {
-                $color: #8A6116;
-            } @else if $shade == 'darker' {
-                $color: #573B00;
-            } @else if $shade == 'text' {
-                $color: #595130;
-            } @else {
-                @error $error_shade;
-            }
-        } @else if $name == 'orange' {
-            @if $shade == 'lighter' {
-                $color: #FCEBDB;
-            } @else if $shade == 'light' {
-                $color: #FFC58B;
-            } @else if $shade == 'dark' {
-                $color: #C05717;
-            } @else if $shade == 'darker' {
-                $color: #4A1504;
-            } @else if $shade == 'text' {
-                $color: #594430;
-            } @else {
-                @error $error_shade;
-            }
-        } @else if $name == 'red' {
-            @if $shade == 'lighter' {
-                $color: #FBEAE5;
-            } @else if $shade == 'light' {
-                $color: #FEAD9A;
-            } @else if $shade == 'dark' {
-                $color: #BF0711;
-            } @else if $shade == 'darker' {
-                $color: #330101;
-            } @else if $shade == 'text' {
-                $color: #583C35;
-            } @else {
-                @error $error_shade;
-            }
-        } @else {
-            @error $error_name;
-        }
-    } @return $color;
+	$color: #F037C1;
+	// Defined error codes
+	$error_name: "The color '#{$name}' doesn't exist";
+	$error_shade: "The color '#{$name}' doesn't have a shade named '#{$shade}'";
+	// Assign main colors
+	@if $shade == null {
+		@if $name == 'main' {
+			$color: #43467F;
+		} @else if $name == 'sky' {
+			$color: #DFE3E8;
+		} @else if $name == 'ink' {
+			$color: #212B36;
+		} @else if $name == 'purple' {
+			$color: #9C6ADE;
+		} @else if $name == 'indigo' {
+			$color: #5C6AC4;
+		} @else if $name == 'blue' {
+			$color: #006FBB;
+		} @else if $name == 'teal' {
+			$color: #47C1BF;
+		} @else if $name == 'green' {
+			$color: #50B83C;
+		} @else if $name == 'yellow' {
+			$color: #EEC200;
+		} @else if $name == 'orange' {
+			$color: #F49342;
+		} @else if $name == 'red' {
+			$color: #DE3618;
+		}
+		// Add extra colors here:
+		@else if $name == 'white' {
+			$color: #FFFFFF;
+		} @else {
+			@error $error_name;
+		}
+	}
+	// Assign shades of color
+	@else {
+		@if $name == 'main' {
+			@if $shade == 'light' {
+				$color: #B3B5CB;
+			} @else if $shade == 'dark' {
+				$color: #1C2260;
+			} @else if $shade == 'darker' {
+				$color: #00044C;
+			} @else {
+				@error $error_shade;
+			}
+		} @else if $name == 'sky' {
+			@if $shade == 'lighter' {
+				$color: #F9FAFB;
+			} @else if $shade == 'light' {
+				$color: #F4F6F8;
+			} @else if $shade == 'dark' {
+				$color: #C4CDD5;
+			} @else {
+				@error $error_shade;
+			}
+		} @else if $name == 'ink' {
+			@if $shade == 'lightest' {
+				$color: #919EAB;
+			} @else if $shade == 'lighter' {
+				$color: #637381;
+			} @else if $shade == 'light' {
+				$color: #454F5B;
+			} @else {
+				@error $error_shade;
+			}
+		} @else if $name == 'purple' {
+			@if $shade == 'lighter' {
+				$color: #F6F0FD;
+			} @else if $shade == 'light' {
+				$color: #E3D0FF;
+			} @else if $shade == 'dark' {
+				$color: #50248F;
+			} @else if $shade == 'darker' {
+				$color: #230051;
+			} @else if $shade == 'text' {
+				$color: #50495A;
+			} @else {
+				@error $error_shade;
+			}
+		} @else if $name == 'indigo' {
+			@if $shade == 'lighter' {
+				$color: #F4F5FA;
+			} @else if $shade == 'light' {
+				$color: #B3BCF5;
+			} @else if $shade == 'dark' {
+				$color: #202E78;
+			} @else if $shade == 'darker' {
+				$color: #000639;
+			} @else if $shade == 'text' {
+				$color: #3E4155;
+			} @else {
+				@error $error_shade;
+			}
+		} @else if $name == 'blue' {
+			@if $shade == 'lighter' {
+				$color: #F4F5FA;
+			} @else if $shade == 'light' {
+				$color: #B3BCF5;
+			} @else if $shade == 'dark' {
+				$color: #202E78;
+			} @else if $shade == 'darker' {
+				$color: #000639;
+			} @else if $shade == 'text' {
+				$color: #3E4155;
+			} @else {
+				@error $error_shade;
+			}
+		} @else if $name == 'teal' {
+			@if $shade == 'lighter' {
+				$color: #E0F5F5;
+			} @else if $shade == 'light' {
+				$color: #B7ECEC;
+			} @else if $shade == 'dark' {
+				$color: #00848E;
+			} @else if $shade == 'darker' {
+				$color: #003135;
+			} @else if $shade == 'text' {
+				$color: #405352;
+			} @else {
+				@error $error_shade;
+			}
+		} @else if $name == 'green' {
+			@if $shade == 'lighter' {
+				$color: #E3F1DF;
+			} @else if $shade == 'light' {
+				$color: #BBE5B3;
+			} @else if $shade == 'dark' {
+				$color: #108043;
+			} @else if $shade == 'darker' {
+				$color: #173630;
+			} @else if $shade == 'text' {
+				$color: #414F3E;
+			} @else {
+				@error $error_shade;
+			}
+		} @else if $name == 'yellow' {
+			@if $shade == 'lighter' {
+				$color: #FCF1CD;
+			} @else if $shade == 'light' {
+				$color: #FFEA8A;
+			} @else if $shade == 'dark' {
+				$color: #8A6116;
+			} @else if $shade == 'darker' {
+				$color: #573B00;
+			} @else if $shade == 'text' {
+				$color: #595130;
+			} @else {
+				@error $error_shade;
+			}
+		} @else if $name == 'orange' {
+			@if $shade == 'lighter' {
+				$color: #FCEBDB;
+			} @else if $shade == 'light' {
+				$color: #FFC58B;
+			} @else if $shade == 'dark' {
+				$color: #C05717;
+			} @else if $shade == 'darker' {
+				$color: #4A1504;
+			} @else if $shade == 'text' {
+				$color: #594430;
+			} @else {
+				@error $error_shade;
+			}
+		} @else if $name == 'red' {
+			@if $shade == 'lighter' {
+				$color: #FBEAE5;
+			} @else if $shade == 'light' {
+				$color: #FEAD9A;
+			} @else if $shade == 'dark' {
+				$color: #BF0711;
+			} @else if $shade == 'darker' {
+				$color: #330101;
+			} @else if $shade == 'text' {
+				$color: #583C35;
+			} @else {
+				@error $error_shade;
+			}
+		} @else {
+			@error $error_name;
+		}
+	} @return $color;
 }
 
 @mixin size($width, $height) {
-    height: $height;
-    width: $width;
+	height: $height;
+	width: $width;
 }
 
+html {
+	background-color: #F4F6F8;
+	color: #161D25;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 62.5%;
+	height: 100%;
+	overflow-y: scroll;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+}
 * {
-    margin: 0;
-    padding: 0;
+	box-sizing: border-box;
 }
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding-bottom: 100px;
+	display: flex;
+	flex-direction: column;
+	line-height: 1;
+	margin: 0;
+	min-height: 100vh;
+	position: relative;
 }
-header {
-    background-color: color('main');
-    color: color('white');
-    padding-top: $header_padding;
-    padding-bottom: $header_padding;
-    padding-left: $padding_page;
-    .siteName {
-        font-size: $header_font-size;
-    }
-    ul {
-        list-style: none;
-        float: right;
-    }
+p {
+	font-size: 1.4rem;
 }
+
 .wrapper {
-    background-color: color('sky', 'lighter');
-    color: color('ink');
-    margin-right: $padding_page;
-    margin-left: $padding_page;
-    margin-top: 20pt;
-    h1 {
-        margin-bottom: 10pt;
-    }
-    h2 {
-        margin-bottom: 10pt;
-    }
-    h3 {
-        margin-top: 10pt;
-    }
-    p {
-        margin-bottom: 10pt;
-    }
+	background-color: color('white', );
+	color: color('ink');
+	margin-right: $padding_page;
+	margin-left: $padding_page;
+	margin-top: 20pt;
+	padding: 0 10rem;
+	h1,
+	h2,
+	p {
+		margin-bottom: 10pt;
+	}
+	h3 {
+		margin-top: 10pt;
+	}
+}
+.ColorPaletteWrapper {
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.6rem;
+	line-height: 1;
+	margin-left: -3.2rem;
+}
+.ColorPalette {
+	flex-basis: 33.33333%;
+	flex-grow: 0;
+	flex: 1 1 25rem;
+	padding-top: 3.2rem;
+	padding-left: 3.2rem;
+}
+.ColorPaletteShade {
+	display: flex;
+	align-items: center;
+	height: 4.8rem;
+	padding-right: 1.6rem;
+	padding-left: 1.6rem;
+	font-size: 1.4rem;
+	color: #fff;
+	background-color: #F9FAFB;
+	&:first-child {
+		border-top-left-radius: .6rem;
+		border-top-right-radius: .6rem;
+	}
+	&:last-child {
+		border-bottom-left-radius: .6rem;
+		border-bottom-right-radius: .6rem;
+	}
+	&.hasDarkText {
+		color: #161D25;
+	}
+	&.isExpanded {
+		height: 7.8rem;
+	}
+}
+.ColorPaletteLabel, .ColorPaletteValue {
+	display: block;
+	flex: 1 1 50%;
+}
+.ColorPaletteValue {
+	text-align: right;
+	white-space: nowrap;
 }
 .codeBlock {
-    background: color('sky');
-    border-radius: 5pt;
-    float: right;
-    line-height: 1.5;
-    margin-bottom: 10pt;
-    margin-left: 10pt;
-    padding: 16pt;
-    width: fit-content;
-    .ind1, .ind2 {
-        border-left: solid;
-        border-width: 1pt;
-        border-color: $color_code;
-        padding-left: 16pt;
-    }
-    ul {
-        list-style: none;
-        ul {
-            border-left: solid;
-            border-width: 1pt;
-            border-color: $color_code;
-            padding-left: 16pt;
-        }
-    }
+	background: color('sky');
+	border-radius: 5pt;
+	float: right;
+	line-height: 1.5;
+	margin-bottom: 10pt;
+	margin-left: 10pt;
+	padding: 16pt;
+	width: fit-content;
+	.ind1, .ind2 {
+		border-left: solid;
+		border-width: 1pt;
+		border-color: $color_code;
+		padding-left: 16pt;
+	}
+	ul {
+		list-style: none;
+		ul {
+			border-left: solid;
+			border-width: 1pt;
+			border-color: $color_code;
+			padding-left: 16pt;
+		}
+	}
 }
 .html {
-    .tag {
-        color: $color_code;
-    }
-    .name {
-        color: $color_html-name;
-    }
-    .attr {
-        color: $color_html-attr;
-    }
-    .string {
-        color: $color_html-string;
-    }
+	.tag {
+		color: $color_code;
+	}
+	.name {
+		color: $color_html-name;
+	}
+	.attr {
+		color: $color_html-attr;
+	}
+	.string {
+		color: $color_html-string;
+	}
 }
 #CSS-Selectors {
-    background: rgb(212, 212, 212);
-    border-collapse: collapse;
-    text-align: left;
-    width: 100%;
-    th {
-        border-bottom: 2pt solid #000;
-        font-weight: 500;
-        text-transform: uppercase;
-    }
-    td {
-        vertical-align: top;
-    }
-    td:first-child {
-        font-size: 10pt;
-        text-transform: uppercase;
-    }
+	background: rgb(212, 212, 212);
+	border-collapse: collapse;
+	text-align: left;
+	width: 100%;
+	th {
+		border-bottom: 2pt solid #000;
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+	td {
+		vertical-align: top;
+	}
+	td:first-child {
+		font-size: 10pt;
+		text-transform: uppercase;
+	}
 }
