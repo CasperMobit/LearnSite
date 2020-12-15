@@ -8,7 +8,7 @@
 
 <div class="wrapper">
 
-	<h1>HTML</h1>
+	<h1 class="Heading_HTML"></h1>
 
 	<?php include('content/html_structure_example-1.html'); ?>
 
@@ -42,15 +42,23 @@
 	
 	<h2>7 Forms</h2>
 
-	<?php include('content/color_palettes-1.html'); ?>
-
+	
 	<h1>CSS</h1>
+	<?php include('content/color_palettes-1.html'); ?>
 	<h2>Selectors</h2>
 	<?php include('content/css_selectors_table-1.html'); ?>
 
 
+	<h1>JavaScript</h1>
+	<h2>Resources</h2>
+	<ul>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN Web Docs</a></li>
+		<li><a href="https://developers.google.com/web/tools/chrome-devtools/console/javascript">Get Started with Running JavaScript in The Console</a></li>
+	</ul>
+
+
 	<h1>Additional Resources</h1>
-	<ul style="font-size:1.6rem; list-style: none;">
+	<ul>
 		<li><a href="https://discuss.codecademy.com/">CodeCademy Forums</a></li>
 		<li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
 		<li><a href="https://www.w3.org/TR/CSS2/selector.html">W3</a></li>
@@ -63,6 +71,8 @@
 	</ul>
 	
 </div>
+
+<script src="scripts/main.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Starting routine
+echo "Starting build routine..."
+
+# Establish build directory target
+TARGET="Build"
+
+INCLUDE_FILES="index.php"
+INCLUDE_DIR="components"
+
+# Clear target content
+echo "Clear $TARGET/ content"
+rm -r $TARGET/*
+
+# Make components directory
+DIR="$TARGET/$INCLUDE_DIR"
+echo "Create $DIR/"
+mkdir $DIR
+
+echo "Copy ${INCLUDE_DIR/*} to $DIR/"
+cp $INCLUDE_DIR/* $DIR
+
+# Move files to Build
+echo "Copy $INCLUDE_FILES to $TARGET/"
+cp $INCLUDE_FILES $TARGET
+
+# Ending routine
+echo "Build routine complete"
