@@ -1,0 +1,19 @@
+{
+  "name": "learnsite",
+  "version": "1.0.0",
+  "description": "Test-site for learning",
+  "main": "scripts/main.js",
+  "scripts": {
+    "test": "node scripts/test_debug.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CasperMobit/LearnSite.git"
+  },
+  "author": "Casper Tollefsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CasperMobit/LearnSite/issues"
+  },
+  "homepage": "https://github.com/CasperMobit/LearnSite#readme"
+}
