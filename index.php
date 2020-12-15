@@ -8,7 +8,7 @@
 
 <div class="wrapper">
 
-	<h1>HTML</h1>
+	<h1 class="Heading_HTML">HTML</h1>
 
 	<?php include('content/html_structure_example-1.html'); ?>
 
@@ -42,9 +42,9 @@
 	
 	<h2>7 Forms</h2>
 
-	<?php include('content/color_palettes-1.html'); ?>
-
+	
 	<h1>CSS</h1>
+	<?php include('content/color_palettes-1.html'); ?>
 	<h2>Selectors</h2>
 	<?php include('content/css_selectors_table-1.html'); ?>
 
@@ -63,6 +63,8 @@
 	</ul>
 	
 </div>
+
+<script src="scripts/main.js"></script>
 
 </body>
 </html>
