@@ -9,8 +9,6 @@ $header_height: 40pt;
 $header_font-size: 16pt;
 $header_padding: ($header_height - $header_font-size) / 2;
 
-$padding_page: 400px;
-
 @function color($name, $shade: null) {
 	$color: #F037C1;
 	// Defined error codes
@@ -217,6 +215,7 @@ html {
 	box-sizing: border-box;
 }
 body {
+	color: color('ink');
 	display: flex;
 	flex-direction: column;
 	line-height: 1;
@@ -224,8 +223,33 @@ body {
 	min-height: 100vh;
 	position: relative;
 }
+header {
+	background-color: white;
+	overflow: hidden;
+	nav {
+		display: block;
+		height: fit-content;
+		margin: 0 auto;
+		min-width: 400px;
+		max-width: 1000px;
+	}
+	a {
+		color: color(ink);
+		display: block;
+		float: right;
+		font-size: 1.6rem;
+		padding: 14px 16px;
+		text-align: center;
+	}
+	a:hover {
+		background-color: lightgray;
+	}
+}
 code {
 	font-size: 1.6rem;
+}
+a {
+	text-decoration: none;
 }
 h1,
 h2,
@@ -260,7 +284,6 @@ ul {
 
 .wrapper {
 	background-color: color('white', );
-	color: color('ink');
 	margin: 2rem auto;
 	padding: 4rem 8rem;
 	min-width: 400px;
@@ -382,6 +405,10 @@ ul {
 }
 
 /* TESTING PROPERTIES */
+.debug, .debug * {
+	background-color: rgba(0, 0, 255, .04);
+	border: 1px solid rgb(212, 44, 190);
+}
 .hasBorder {
 	border: 1px solid rgb(212, 44, 190);
 }

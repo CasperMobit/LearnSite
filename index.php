@@ -6,6 +6,13 @@
 </head>
 <body>
 
+<header class="">
+	<nav>
+		<a href="./index.php">Another Page</a>
+		<a href="./index.php">Home</a>
+	</nav>
+</header>
+
 <div class="wrapper">
 
 	<h1 class="Heading_HTML"></h1>
