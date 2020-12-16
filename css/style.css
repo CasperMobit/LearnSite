@@ -1,6 +1,5 @@
 html {
-  background-color: #F4F6F8;
-  color: #161D25;
+  background-color: #DFE3E8;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 62.5%;
   height: 100%;
@@ -33,31 +32,31 @@ body {
 }
 
 header {
-  background-color: white;
+  background-color: #43467F;
+  height: 6rem;
   overflow: hidden;
 }
 
-header nav {
-  display: block;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin: 0 auto;
-  min-width: 400px;
-  max-width: 1000px;
-}
-
 header a {
-  color: #212B36;
+  color: white;
   display: block;
-  float: right;
-  font-size: 1.6rem;
-  padding: 14px 16px;
+  font-size: 2rem;
+  height: 6rem;
+  padding: 2rem 1vw;
   text-align: center;
 }
 
 header a:hover {
-  background-color: lightgray;
+  background-color: #1C2260;
+}
+
+header a.btn {
+  float: right;
+}
+
+header a#Logo {
+  float: left;
+  margin-left: -1vw;
 }
 
 code {
@@ -91,9 +90,21 @@ h2 {
 
 p {
   font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+p.meta {
+  color: #637381;
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 0;
 }
 
 hr {
+  border-color: #F9FAFB;
+  color: #F9FAFB;
   display: inline-block;
   width: 100%;
 }
@@ -104,12 +115,13 @@ ul {
   list-style: none;
 }
 
-.wrapper {
+#wrapper {
+  padding: 2rem 0;
+}
+
+#wrapper .content {
   background-color: #FFFFFF;
-  margin: 2rem auto;
-  padding: 4rem 8rem;
-  min-width: 400px;
-  max-width: 1000px;
+  padding: inherit;
 }
 
 .ColorPaletteWrapper {
@@ -262,6 +274,7 @@ ul {
 .debug, .debug * {
   background-color: rgba(0, 0, 255, 0.04);
   border: 1px solid #d42cbe;
+  min-height: 40px;
 }
 
 .hasBorder {

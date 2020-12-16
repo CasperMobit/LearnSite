@@ -1,0 +1,28 @@
+@function colSize($size) {
+	$value: 12 / $size;
+	$value: 100% / $value;
+	@return $value;
+}
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+[class*="col-"] {
+	// border: 1px solid red;
+	float: left;
+	min-height: 1px;
+	// padding: 15px;
+}
+.col-1 {width: colSize(1);}
+.col-2 {width: colSize(2);}
+.col-3 {width: 25%;}
+.col-4 {width: colSize(4);}
+.col-5 {width: colSize(5);}
+.col-6 {width: 50%;}
+.col-7 {width: colSize(7);}
+.col-8 {width: colSize(8);}
+.col-9 {width: 75%;}
+.col-10 {width: colSize(10);}
+.col-11 {width: colSize(11);}
+.col-12 {width: 100%;}

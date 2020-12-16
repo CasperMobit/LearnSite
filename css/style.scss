@@ -5,9 +5,9 @@ $color_html-attr: rgb(0, 174, 255);
 $color_html-string: rgb(255, 102, 0);
 $color_text: #000;
 
-$header_height: 40pt;
-$header_font-size: 16pt;
-$header_padding: ($header_height - $header_font-size) / 2;
+$header_height: 6rem;
+$header_btn_font-size: $header_height - 4rem;
+$header_btn_padding: ($header_height - $header_btn_font-size) / 2;
 
 @function color($name, $shade: null) {
 	$color: #F037C1;
@@ -202,8 +202,7 @@ $header_padding: ($header_height - $header_font-size) / 2;
 }
 
 html {
-	background-color: #F4F6F8;
-	color: #161D25;
+	background-color: color(sky, );
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 62.5%;
 	height: 100%;
@@ -214,6 +213,7 @@ html {
 * {
 	box-sizing: border-box;
 }
+
 body {
 	color: color('ink');
 	display: flex;
@@ -224,25 +224,26 @@ body {
 	position: relative;
 }
 header {
-	background-color: white;
+	background-color: color(main, );
+	height: $header_height;
 	overflow: hidden;
-	nav {
-		display: block;
-		height: fit-content;
-		margin: 0 auto;
-		min-width: 400px;
-		max-width: 1000px;
-	}
 	a {
-		color: color(ink);
+		color: white;
 		display: block;
-		float: right;
-		font-size: 1.6rem;
-		padding: 14px 16px;
+		font-size: $header_btn_font-size;
+		height: $header_height;
+		padding: $header_btn_padding 1vw;
 		text-align: center;
 	}
 	a:hover {
-		background-color: lightgray;
+		background-color: color(main, dark);
+	}
+	a.btn {
+		float: right;
+	}
+	a#Logo {
+		float: left;
+		margin-left: -1vw;
 	}
 }
 code {
@@ -271,8 +272,19 @@ h2 {
 }
 p {
 	font-size: 1.6rem;
+	line-height: 1.5;
+	&.meta {
+		color: color('ink', 'lighter');
+		font-family: sans-serif;
+		font-size: 1.8rem;
+		font-weight: 500;
+		line-height: 1;
+		padding: 0;
+	}
 }
 hr {
+	border-color: color('sky', 'lighter');
+	color: color('sky', 'lighter');
 	display: inline-block;
 	width: 100%;
 }
@@ -282,12 +294,12 @@ ul {
 	list-style: none;
 }
 
-.wrapper {
-	background-color: color('white', );
-	margin: 2rem auto;
-	padding: 4rem 8rem;
-	min-width: 400px;
-	max-width: 1000px;
+#wrapper {
+	padding: 2rem 0;
+	.content {
+		background-color: color('white', );
+		padding: inherit;
+	}
 }
 .ColorPaletteWrapper {
 	display: flex;
@@ -408,6 +420,7 @@ ul {
 .debug, .debug * {
 	background-color: rgba(0, 0, 255, .04);
 	border: 1px solid rgb(212, 44, 190);
+	min-height: 40px;
 }
 .hasBorder {
 	border: 1px solid rgb(212, 44, 190);
