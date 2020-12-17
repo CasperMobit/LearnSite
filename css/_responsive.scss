@@ -1,0 +1,40 @@
+// _responsive.scss
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+[class*="col-"] {
+	// border: 1px solid red;
+	float: left;
+	min-height: 1px;
+	// padding: 15px;
+}
+.col-1 {width: ColSize(1);}
+.col-2 {width: ColSize(2);}
+.col-3 {width: ColSize(3);}
+.col-4 {width: ColSize(4);}
+.col-5 {width: ColSize(5);}
+.col-6 {width: ColSize(6);}
+.col-7 {width: ColSize(7);}
+.col-8 {width: ColSize(8);}
+.col-9 {width: ColSize(9);}
+.col-10 {width: ColSize(10);}
+.col-11 {width: ColSize(11);}
+.col-12 {width: ColSize(12);}
+
+@include ViewPort('md') {
+	.col-6, .col-8 {width: ColSize(10);}
+	.col-3, .col-2 {width: ColSize(1)}
+}
+@include ViewPort('sm') {
+	.col-6 {width: ColSize(10);}
+	.col-3 {width: ColSize(1)}
+}
+@include ViewPort('xs') {
+	.col-6, .col-8 {width: ColSize(12);}
+	.col-2, .col-3 {
+		display: none;
+	}
+}

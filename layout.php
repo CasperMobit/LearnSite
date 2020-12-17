@@ -9,7 +9,7 @@
 <?php include('./components/header.html'); ?>
 
 <div class="row" id="wrapper">
-	<div class="col-3 empty"></div>
+	<div class="col-3"></div>
 	<div class="col-6 content">
 		<h1>Layout</h1>
 		<p class="meta">This layout was made using CSS only!</p>
@@ -43,7 +43,7 @@
 			</tr>
 		</table>
 	</div>
-	<div class="col-3 empty"></div>
+	<div class="col-3"></div>
 </div>
 <div class="row">
 	<div class="col-2"></div>

@@ -1,0 +1,80 @@
+// _typeface.scss
+
+$color_body:			Color('ink');
+$color_meta:			Color('ink', 'lighter');
+
+$font-family_body:		'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$font-family_meta:		sans-serif;
+
+$font-size_h1:			3em;
+$font-size_h1--xs:		8vw;
+$font-size_h2:			1.8em;
+$font-size_p:			1.2em;
+$font-size_p--xs:		1.2em;
+$font-size_li:			$font-size_p;
+$font-size_meta:		1.8em;
+
+$font-weight_h2: 		400;
+$font-weight_meta: 		500;
+
+$line-height_body:		1;
+$line-height_h1:		1;
+ $add-space-before_h1:	true;
+ $space-before-size_h1:	2em;
+$line-height_li:		1.6;
+$line-height_meta:		0;
+$line-height_p:			1.5;
+$line-height_p--xs:		1.2;
+
+$text-decoration_a:		none;
+
+$text-transform_h1: 	none;
+
+
+a {
+	text-decoration: $text-decoration_a;
+}
+
+body {
+	color: $color_body;
+	font-family: $font-family_body;
+	line-height: $line-height_body;
+}
+h1 {
+	font-size: $font-size_h1;
+	line-height: $line-height_h1;
+	text-transform: $text-transform_h1;
+	&:not(:first-child) {
+		@if $add-space-before_h1 {
+			margin-top: $space-before-size_h1;
+		}
+	}
+}
+h2 {
+	font-size: $font-size_h2;
+	font-weight: $font-weight_h2;
+}
+li {
+	font-size: $font-size_li;
+	line-height: $line-height_li;
+}
+p {
+	font-size: $font-size_p;
+	line-height: $line-height_p;
+	&.meta {
+		color: $color_meta;
+		font-family: $font-family_meta;
+		font-size: $font-size_meta;
+		font-weight: $font-weight_meta;
+		line-height: $line-height_meta;
+	}
+}
+@include ViewPort('xs') {
+	h1 {
+		font-size: $font-size_h1--xs;
+	}
+	p {
+		font-size: $font-size_p--xs;
+		line-height: $line-height_p--xs;
+	}
+}

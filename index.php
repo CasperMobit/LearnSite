@@ -9,8 +9,8 @@
 <?php include('./components/header.html'); ?>
 
 <div class="row" id="wrapper">
-	<div class="col-3"></div>
-	<div class="col-6 content">
+	<div class="col-2 empty"></div>
+	<div class="col-8 content">
 		<h1 class="Heading_HTML"></h1>
 		<h2>1 Structure</h2>
 		<p>The opening <code>&lt;html&gt;</code> tag indicates that anything between it and a closing <code>&lt;/html&gt;</code> tag is HTML code.</p>
@@ -20,7 +20,6 @@
 		<p>A paragraph of text appears between the <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code> tags.</p>
 		<p>The closing <code>&lt;/body&gt;</code> tag indicates the end of what should appear in the main browser window.</p>
 		<p>The closing <code>&lt;/html&gt;</code> tag indicates that it is the end of the HTML code.</p>
-		<?php include('./content/html_structure_example-1.html'); ?>
 
 		<hr>
 
@@ -48,14 +47,14 @@
 
 		<h1>JavaScript</h1>
 		<h2>Resources</h2>
-		<ul>
+		<ul class="no-indent">
 			<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN Web Docs</a></li>
 			<li><a href="https://developers.google.com/web/tools/chrome-devtools/console/javascript">Get Started with Running JavaScript in The Console</a></li>
 			<li><a href="https://repl.it/">Repl.it IDE</a> - Repl.it is an online IDE for writing and running code in a number of programming languages, including JavaScript. This is helpful if you want to edit and share code right from your browser.</li>
 		</ul>
 
 		<h1>Additional Resources</h1>
-		<ul>
+		<ul class="no-indent">
 			<li><a href="https://discuss.codecademy.com/">CodeCademy Forums</a></li>
 			<li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
 			<li><a href="https://www.w3.org/TR/CSS2/selector.html">W3</a></li>
@@ -66,7 +65,7 @@
 			<li><a href="https://repl.it/">Repl.it</a></li>
 			<li><a href="https://eloquentjavascript.net/">Eloquent JavaScript</a> - a free e-book that can be used instead of or with JavaScript & JQuery</li>
 	</div>
-	<div class="col-3"></div>
+	<div class="col-2 empty"></div>
 </div>
 
 <script src="scripts/main.js"></script>

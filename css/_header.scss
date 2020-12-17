@@ -1,18 +1,16 @@
 // _header.scss
 
-$header_height: 6rem;
-$header_btn_font-size: $header_height - 4rem;
-$header_btn_padding: ($header_height - $header_btn_font-size) / 2;
+$font-size_header:	1.4em;
+
+$header_btn_padding: $font-size_header * .6;
 
 header {
 	background-color: Color('main');
-	height: $header_height;
 	overflow: hidden;
 	a {
 		color: white;
 		display: block;
-		font-size: $header_btn_font-size;
-		height: $header_height;
+		font-size: $font-size_header;
 		padding: $header_btn_padding 1vw;
 		text-align: center;
 	}
@@ -24,6 +22,18 @@ header {
 	}
 	a#Logo {
 		float: left;
+		font-size: $font-size_header;
 		margin-left: -1vw;
+	}
+}
+@include ViewPort('xs') {
+	header {
+		a {
+			display: none;
+		}
+		a#Logo {
+			display: block;
+			margin-left: 1vw;
+		}
 	}
 }

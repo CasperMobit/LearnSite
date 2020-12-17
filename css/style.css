@@ -1,15 +1,13 @@
 header {
   background-color: #43467F;
-  height: 6rem;
   overflow: hidden;
 }
 
 header a {
   color: white;
   display: block;
-  font-size: 2rem;
-  height: 6rem;
-  padding: 2rem 1vw;
+  font-size: 1.4em;
+  padding: 0.84em 1vw;
   text-align: center;
 }
 
@@ -23,7 +21,73 @@ header a.btn {
 
 header a#Logo {
   float: left;
+  font-size: 1.4em;
   margin-left: -1vw;
+}
+
+@media screen and (max-width: 767px) {
+  header a {
+    display: none;
+  }
+  header a#Logo {
+    display: block;
+    margin-left: 1vw;
+  }
+}
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #DFE3E8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  position: relative;
+  min-width: 360px;
+}
+
+#wrapper {
+  padding: 2em 0;
+}
+
+#wrapper .content {
+  background-color: #FFFFFF;
+  padding: 1em 5em;
+}
+
+@media screen and (max-width: 1199px) {
+  #wrapper .content {
+    padding: 1em 4em;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #wrapper .content {
+    padding: 1em 3em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #wrapper {
+    padding: 0;
+  }
+  #wrapper .content {
+    padding: .8em 2em;
+  }
 }
 
 .row::after {
@@ -86,11 +150,11 @@ header a#Logo {
 }
 
 @media screen and (max-width: 1199px) {
-  .col-6 {
-    width: 66.66667%;
+  .col-6, .col-8 {
+    width: 83.33333%;
   }
-  .col-3 {
-    width: 16.66667%;
+  .col-3, .col-2 {
+    width: 8.33333%;
   }
 }
 
@@ -104,99 +168,65 @@ header a#Logo {
 }
 
 @media screen and (max-width: 767px) {
-  .col-6 {
+  .col-6, .col-8 {
     width: 100%;
   }
-  .empty {
+  .col-2, .col-3 {
     display: none;
   }
-}
-
-html {
-  background-color: #DFE3E8;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 62.5%;
-  height: 100%;
-  overflow-y: scroll;
-  text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-     -moz-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-          text-size-adjust: 100%;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  color: #212B36;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  line-height: 1;
-  margin: 0;
-  min-height: 100vh;
-  position: relative;
-  min-width: 360px;
-}
-
-@media screen and (max-width: 767px) {
-  header a {
-    display: none;
-    margin-left: 0;
-  }
-  header a#Logo {
-    display: block;
-  }
-}
-
-code {
-  font-size: 1.6rem;
 }
 
 a {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-  padding: 1rem 0;
+body {
+  color: #212B36;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
 }
 
 h1 {
-  font-size: 4rem;
-  text-transform: uppercase;
+  font-size: 3em;
+  line-height: 1;
+  text-transform: none;
+}
+
+h1:not(:first-child) {
+  margin-top: 2em;
 }
 
 h2 {
-  font-size: 2.8rem;
+  font-size: 1.8em;
   font-weight: 400;
 }
 
+li {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
 p {
-  font-size: 1.6rem;
+  font-size: 1.2em;
   line-height: 1.5;
 }
 
 p.meta {
   color: #637381;
   font-family: sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.8em;
   font-weight: 500;
-  line-height: 1;
-  padding: 0;
+  line-height: 0;
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 8vw;
+  }
+  p {
+    font-size: 1.2em;
+    line-height: 1.2;
+  }
 }
 
 hr {
@@ -207,33 +237,11 @@ hr {
 }
 
 ul {
-  font-size: 1.6rem;
-  line-height: 1.6;
   list-style: none;
 }
 
-#wrapper {
-  padding: 2rem 0;
-}
-
-#wrapper .content {
-  background-color: #FFFFFF;
-  padding: 6rem;
-}
-
-@media screen and (max-width: 991px) {
-  #wrapper .content {
-    padding: 2rem 3rem;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  #wrapper {
-    padding: 0;
-  }
-  #wrapper .content {
-    padding: 2rem 3rem;
-  }
+ul.no-indent {
+  padding-left: 0;
 }
 
 .ColorPaletteWrapper {
@@ -242,21 +250,17 @@ ul {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-size: 1.6rem;
-  line-height: 1;
-  margin-left: -3.2rem;
+  margin-left: -1.6rem;
 }
 
 .ColorPalette {
-  -ms-flex-preferred-size: 33.33333%;
-      flex-basis: 33.33333%;
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
-  -ms-flex: 1 1 25rem;
-      flex: 1 1 25rem;
-  padding-top: 3.2rem;
-  padding-left: 3.2rem;
+  -ms-flex: 1 1 14rem;
+      flex: 1 1 14rem;
+  padding-top: 2rem;
+  padding-left: 1.6rem;
 }
 
 .ColorPaletteShade {
@@ -266,10 +270,10 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 4.8rem;
-  padding-right: 1.6rem;
-  padding-left: 1.6rem;
-  font-size: 1.4rem;
+  height: 3.4rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  font-size: 1rem;
   color: #FFFFFF;
   background-color: #F9FAFB;
 }
@@ -285,11 +289,11 @@ ul {
 }
 
 .ColorPaletteShade.hasDarkText {
-  color: #161D25;
+  color: #212B36;
 }
 
 .ColorPaletteShade.isExpanded {
-  height: 7.8rem;
+  height: 4rem;
 }
 
 .ColorPaletteLabel, .ColorPaletteValue {
@@ -302,62 +306,6 @@ ul {
 .ColorPaletteValue {
   text-align: right;
   white-space: nowrap;
-}
-
-.cardWcode {
-  display: block;
-  float: left;
-}
-
-.cardWcode h2 {
-  display: block;
-}
-
-.cardWcode .content {
-  display: inline-block;
-  width: 50%;
-}
-
-.codeBlock {
-  background: #DFE3E8;
-  border-radius: .6rem;
-  display: inline-block;
-  min-width: 400px;
-  text-align: left;
-  vertical-align: top;
-  width: 49%;
-}
-
-.codeBlock .ind1, .codeBlock .ind2 {
-  padding-left: 30px;
-}
-
-.codeBlock ul {
-  line-height: 1.3 !important;
-  list-style: none;
-}
-
-.codeBlock ul ul {
-  border-left: 1px solid #b1b1b1;
-  border-radius: 0;
-  padding-left: 30px;
-  padding-top: .8rem;
-}
-
-.html .tag {
-  color: #b1b1b1;
-}
-
-.html .name {
-  color: #0059ff;
-}
-
-.html .attr {
-  color: #00aeff;
-}
-
-.html .string {
-  color: #ff6600;
 }
 
 #CSS-Selectors {

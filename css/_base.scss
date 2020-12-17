@@ -1,0 +1,49 @@
+// _base.scss
+
+$padding_content:	1em 5em;
+$padding_wrapper:	2em 0;
+
+html {
+	height: 100%;
+	overflow-y: scroll;
+	text-rendering: optimizeLegibility;
+}
+* {box-sizing: border-box;}
+
+body {
+	background-color: Color('sky');
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	position: relative;
+	min-width: 360px;
+}
+#wrapper {
+	padding: $padding_wrapper;
+	.content {
+		background-color: Color('white');
+		padding: $padding_content;
+	}
+}
+@include ViewPort('md') {
+	#wrapper {
+		.content {
+			padding: 1em 4em;
+		}
+	}
+}
+@include ViewPort('sm') {
+	#wrapper {
+		.content {
+			padding: 1em 3em;
+		}
+	}
+}
+@include ViewPort('xs') {
+	#wrapper {
+		padding: 0;
+		.content {
+			padding: .8em 2em;
+		}
+	}
+}
