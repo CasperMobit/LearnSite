@@ -1,8 +1,12 @@
 // _header.scss
 
-$font-size_header:	1.4em;
+$font-size_button:	1.2em;
+$font-size_Logo:	1.4em;
 
-$header_btn_padding: $font-size_header * .6;
+$padding_a:			1em 1vw;
+
+$tmp: $font-size_Logo, $font-size_button;
+$header_btn_padding: .8;
 
 header {
 	background-color: Color('main');
@@ -10,8 +14,8 @@ header {
 	a {
 		color: white;
 		display: block;
-		font-size: $font-size_header;
-		padding: $header_btn_padding 1vw;
+		font-size: $font-size_button;
+		padding: $padding_a;
 		text-align: center;
 	}
 	a:hover {
@@ -22,7 +26,7 @@ header {
 	}
 	a#Logo {
 		float: left;
-		font-size: $font-size_header;
+		font-size: $font-size_Logo;
 		margin-left: -1vw;
 	}
 }

@@ -14,8 +14,10 @@ $font-size_p--xs:		1.2em;
 $font-size_li:			$font-size_p;
 $font-size_meta:		1.8em;
 
+$font-weight_h1: 		600;
 $font-weight_h2: 		400;
 $font-weight_meta: 		500;
+$font-weight_p: 		500;
 
 $line-height_body:		1;
 $line-height_h1:		1;
@@ -31,6 +33,37 @@ $text-decoration_a:		none;
 $text-transform_h1: 	none;
 
 
+/*
+|==========================================|
+|                                          |
+|     -- REALM OF POSSIBLE FUCKUPS --      |
+|          !!! DO NOT TOUCH !!!            |
+|                                          |
+|==========================================|
+
+            uuuuuuuuuuuuuuuuuuuu
+          u" uuuuuuuuuuuuuuuuuu "u
+        u" u$$$$$$$$$$$$$$$$$$$$u "u
+      u" u$$$$$$$$$$$$$$$$$$$$$$$$u "u
+    u" u$$$$$$$$$$$$$$$$$$$$$$$$$$$$u "u
+  u" u$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$u "u
+u" u$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$u "u
+$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $
+$ $$$" ... "$...  ...$" ... "$$$  ... "$$$ $
+$ $$$u `"$$$$$$$  $$$  $$$$$  $$  $$$  $$$ $
+$ $$$$$$uu "$$$$  $$$  $$$$$  $$  """ u$$$ $
+$ $$$""$$$  $$$$  $$$u "$$$" u$$  $$$$$$$$ $
+$ $$$$....,$$$$$..$$$$$....,$$$$..$$$$$$$$ $
+"u "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$" u"
+  "u "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$" u"
+    "u "$$$$$$$$$$$$$$$$$$$$$$$$$$$$" u"
+      "u "$$$$$$$$$$$$$$$$$$$$$$$$" u"
+        "u "$$$$$$$$$$$$$$$$$$$$" u"
+          "u """""""""""""""""" u"
+            """"""""""""""""""""
+
+*/
+
 a {
 	text-decoration: $text-decoration_a;
 }
@@ -42,6 +75,7 @@ body {
 }
 h1 {
 	font-size: $font-size_h1;
+	font-weight: $font-weight_h1;
 	line-height: $line-height_h1;
 	text-transform: $text-transform_h1;
 	&:not(:first-child) {
@@ -60,6 +94,7 @@ li {
 }
 p {
 	font-size: $font-size_p;
+	font-weight: $font-weight_p;
 	line-height: $line-height_p;
 	&.meta {
 		color: $color_meta;
