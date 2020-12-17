@@ -1,15 +1,6 @@
-$color_code: rgb(177, 177, 177);
-$color_code-background: rgb(240, 240, 240);
-$color_html-name: rgb(0, 89, 255);
-$color_html-attr: rgb(0, 174, 255);
-$color_html-string: rgb(255, 102, 0);
-$color_text: #000;
+// style.scss
 
-$header_height: 6rem;
-$header_btn_font-size: $header_height - 4rem;
-$header_btn_padding: ($header_height - $header_btn_font-size) / 2;
-
-@function color($name, $shade: null) {
+@function Color($name, $shade: null) {
 	$color: #F037C1;
 	// Defined error codes
 	$error_name: "The color '#{$name}' doesn't exist";
@@ -195,6 +186,78 @@ $header_btn_padding: ($header_height - $header_btn_font-size) / 2;
 		}
 	} @return $color;
 }
+@function ColSize($size) {
+	$value: 12 / $size;
+	$value: 100% / $value;
+	@return $value;
+}
+@mixin ViewPort($size) {
+	@if $size == 'lg' {
+		@media screen and (min-width: 1200px) {
+			@content;
+		}
+	} @else if $size == 'md' {
+		@media screen and (max-width: 1199px) {
+			@content;
+		}
+	} @else if $size == 'sm' {
+		@media screen and (max-width: 991px) {
+			@content;
+		}
+	} @else if $size == 'xs' {
+		@media screen and (max-width: 767px) {
+			@content;
+		}
+	}
+}
+
+@import 'header';
+
+$color_code: rgb(177, 177, 177);
+$color_code-background: rgb(240, 240, 240);
+$color_html-name: rgb(0, 89, 255);
+$color_html-attr: rgb(0, 174, 255);
+$color_html-string: rgb(255, 102, 0);
+$color_text: #000;
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+[class*="col-"] {
+	// border: 1px solid red;
+	float: left;
+	min-height: 1px;
+	// padding: 15px;
+}
+.col-1 {width: ColSize(1);}
+.col-2 {width: ColSize(2);}
+.col-3 {width: ColSize(3);}
+.col-4 {width: ColSize(4);}
+.col-5 {width: ColSize(5);}
+.col-6 {width: ColSize(6);}
+.col-7 {width: ColSize(7);}
+.col-8 {width: ColSize(8);}
+.col-9 {width: ColSize(9);}
+.col-10 {width: ColSize(10);}
+.col-11 {width: ColSize(11);}
+.col-12 {width: ColSize(12);}
+
+@include ViewPort('md') {
+	.col-6 {width: ColSize(8);}
+	.col-3 {width: ColSize(2)}
+}
+@include ViewPort('sm') {
+	.col-6 {width: ColSize(10);}
+	.col-3 {width: ColSize(1)}
+}
+@include ViewPort('xs') {
+	.col-6 {width: ColSize(12);}
+	.empty {
+		display: none;
+	}
+}
 
 @mixin size($width, $height) {
 	height: $height;
@@ -202,7 +265,7 @@ $header_btn_padding: ($header_height - $header_btn_font-size) / 2;
 }
 
 html {
-	background-color: color(sky, );
+	background-color: Color('sky');
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 62.5%;
 	height: 100%;
@@ -215,37 +278,28 @@ html {
 }
 
 body {
-	color: color('ink');
+	color: Color('ink');
 	display: flex;
 	flex-direction: column;
 	line-height: 1;
 	margin: 0;
 	min-height: 100vh;
 	position: relative;
+	min-width: 360px;
 }
-header {
-	background-color: color(main, );
-	height: $header_height;
-	overflow: hidden;
-	a {
-		color: white;
-		display: block;
-		font-size: $header_btn_font-size;
-		height: $header_height;
-		padding: $header_btn_padding 1vw;
-		text-align: center;
-	}
-	a:hover {
-		background-color: color(main, dark);
-	}
-	a.btn {
-		float: right;
-	}
-	a#Logo {
-		float: left;
-		margin-left: -1vw;
+
+@include ViewPort('xs') {
+	header {
+		a {
+			display: none;
+			margin-left: 0;
+		}
+		a#Logo {
+			display: block;
+		}
 	}
 }
+
 code {
 	font-size: 1.6rem;
 }
@@ -274,7 +328,7 @@ p {
 	font-size: 1.6rem;
 	line-height: 1.5;
 	&.meta {
-		color: color('ink', 'lighter');
+		color: Color('ink', 'lighter');
 		font-family: sans-serif;
 		font-size: 1.8rem;
 		font-weight: 500;
@@ -283,8 +337,8 @@ p {
 	}
 }
 hr {
-	border-color: color('sky', 'lighter');
-	color: color('sky', 'lighter');
+	border-color: Color('sky', 'lighter');
+	color: Color('sky', 'lighter');
 	display: inline-block;
 	width: 100%;
 }
@@ -297,8 +351,23 @@ ul {
 #wrapper {
 	padding: 2rem 0;
 	.content {
-		background-color: color('white', );
-		padding: inherit;
+		background-color: Color('white');
+		padding: 6rem;
+	}
+}
+@include ViewPort('sm') {
+	#wrapper {
+		.content {
+			padding: 2rem 3rem;
+		}
+	}
+}
+@include ViewPort('xs') {
+	#wrapper {
+		padding: 0;
+		.content {
+			padding: 2rem 3rem;
+		}
 	}
 }
 .ColorPaletteWrapper {
@@ -322,7 +391,7 @@ ul {
 	padding-right: 1.6rem;
 	padding-left: 1.6rem;
 	font-size: 1.4rem;
-	color: #fff;
+	color: Color('white');
 	background-color: #F9FAFB;
 	&:first-child {
 		border-top-left-radius: .6rem;
@@ -361,7 +430,7 @@ ul {
 .codeBlock {
 	$indentSize: 30px;
 
-	background: color('sky', );
+	background: Color('sky');
 	// border: 1px solid black;
 	border-radius: .6rem;
 	display: inline-block;
@@ -398,12 +467,12 @@ ul {
 	}
 }
 #CSS-Selectors {
-	background: rgb(212, 212, 212);
+	background: Color('sky', 'dark');
 	border-collapse: collapse;
 	text-align: left;
 	width: 100%;
 	th {
-		border-bottom: 2pt solid #000;
+		border-bottom: 2pt solid black;
 		font-weight: 500;
 		text-transform: uppercase;
 	}

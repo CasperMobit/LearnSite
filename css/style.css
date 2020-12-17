@@ -1,3 +1,117 @@
+header {
+  background-color: #43467F;
+  height: 6rem;
+  overflow: hidden;
+}
+
+header a {
+  color: white;
+  display: block;
+  font-size: 2rem;
+  height: 6rem;
+  padding: 2rem 1vw;
+  text-align: center;
+}
+
+header a:hover {
+  background-color: #1C2260;
+}
+
+header a.btn {
+  float: right;
+}
+
+header a#Logo {
+  float: left;
+  margin-left: -1vw;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  min-height: 1px;
+}
+
+.col-1 {
+  width: 8.33333%;
+}
+
+.col-2 {
+  width: 16.66667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33333%;
+}
+
+.col-5 {
+  width: 41.66667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33333%;
+}
+
+.col-8 {
+  width: 66.66667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33333%;
+}
+
+.col-11 {
+  width: 91.66667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+@media screen and (max-width: 1199px) {
+  .col-6 {
+    width: 66.66667%;
+  }
+  .col-3 {
+    width: 16.66667%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .col-6 {
+    width: 83.33333%;
+  }
+  .col-3 {
+    width: 8.33333%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .col-6 {
+    width: 100%;
+  }
+  .empty {
+    display: none;
+  }
+}
+
 html {
   background-color: #DFE3E8;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -29,34 +143,17 @@ body {
   margin: 0;
   min-height: 100vh;
   position: relative;
+  min-width: 360px;
 }
 
-header {
-  background-color: #43467F;
-  height: 6rem;
-  overflow: hidden;
-}
-
-header a {
-  color: white;
-  display: block;
-  font-size: 2rem;
-  height: 6rem;
-  padding: 2rem 1vw;
-  text-align: center;
-}
-
-header a:hover {
-  background-color: #1C2260;
-}
-
-header a.btn {
-  float: right;
-}
-
-header a#Logo {
-  float: left;
-  margin-left: -1vw;
+@media screen and (max-width: 767px) {
+  header a {
+    display: none;
+    margin-left: 0;
+  }
+  header a#Logo {
+    display: block;
+  }
 }
 
 code {
@@ -121,7 +218,22 @@ ul {
 
 #wrapper .content {
   background-color: #FFFFFF;
-  padding: inherit;
+  padding: 6rem;
+}
+
+@media screen and (max-width: 991px) {
+  #wrapper .content {
+    padding: 2rem 3rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #wrapper {
+    padding: 0;
+  }
+  #wrapper .content {
+    padding: 2rem 3rem;
+  }
 }
 
 .ColorPaletteWrapper {
@@ -158,7 +270,7 @@ ul {
   padding-right: 1.6rem;
   padding-left: 1.6rem;
   font-size: 1.4rem;
-  color: #fff;
+  color: #FFFFFF;
   background-color: #F9FAFB;
 }
 
@@ -249,14 +361,14 @@ ul {
 }
 
 #CSS-Selectors {
-  background: #d4d4d4;
+  background: #C4CDD5;
   border-collapse: collapse;
   text-align: left;
   width: 100%;
 }
 
 #CSS-Selectors th {
-  border-bottom: 2pt solid #000;
+  border-bottom: 2pt solid black;
   font-weight: 500;
   text-transform: uppercase;
 }

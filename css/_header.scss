@@ -1,0 +1,29 @@
+// _header.scss
+
+$header_height: 6rem;
+$header_btn_font-size: $header_height - 4rem;
+$header_btn_padding: ($header_height - $header_btn_font-size) / 2;
+
+header {
+	background-color: Color('main');
+	height: $header_height;
+	overflow: hidden;
+	a {
+		color: white;
+		display: block;
+		font-size: $header_btn_font-size;
+		height: $header_height;
+		padding: $header_btn_padding 1vw;
+		text-align: center;
+	}
+	a:hover {
+		background-color: Color('main', 'dark');
+	}
+	a.btn {
+		float: right;
+	}
+	a#Logo {
+		float: left;
+		margin-left: -1vw;
+	}
+}
