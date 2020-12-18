@@ -1,43 +1,79 @@
 // _header.scss
 
-$font-size_button:	1.2em;
-$font-size_Logo:	1.4em;
+$bgc: (
+	'header': 		Color('main')
+);
+$color: (
+	'a':			white
+);
+$font-size: (
+	'a':			1.2em,
+	'Logo':			1.4em
+);
+$padding: (
+	'a': (
+		'top':		1em,
+		'right':	.6em,
+		'bottom':	1em,
+		'left':		.6em
+	),
+	'Logo': (
+		'top':		1em,
+		'right':	0,
+		'bottom':	1em,
+		'left':		0
+	)
+);
 
-$padding_a:			1em 1vw;
 
-$tmp: $font-size_Logo, $font-size_button;
-$header_btn_padding: .8;
 
 header {
-	background-color: Color('main');
+	background-color: Array($bgc, 'header');
 	overflow: hidden;
 	a {
-		color: white;
+		color: Array($color, 'a');
 		display: block;
-		font-size: $font-size_button;
-		padding: $padding_a;
 		text-align: center;
-	}
-	a:hover {
-		background-color: Color('main', 'dark');
 	}
 	a.btn {
 		float: right;
+		font-size: Array($font-size, 'a');
+		padding: Array($padding, 'a', 'top') Array($padding, 'a', 'right') Array($padding, 'a', 'bottom') Array($padding, 'a', 'left');
+	}
+	a.btn:hover {
+		background-color: Color('main', 'dark');
+	}
+	a#HamBrgBtn {
+		display: none;
 	}
 	a#Logo {
 		float: left;
-		font-size: $font-size_Logo;
-		margin-left: -1vw;
+		font-size: Array($font-size, 'Logo');
+		padding: Array($padding, 'Logo', 'top') Array($padding, 'Logo', 'right') Array($padding, 'Logo', 'bottom') Array($padding, 'Logo', 'left');
 	}
 }
+#HamBrgMenu {
+	background-color: mediumaquamarine;
+	display: none;
+	height: 100%;
+	left: 20%;
+	position: fixed;
+	width: 80%;
+}
+
 @include ViewPort('xs') {
 	header {
 		a {
 			display: none;
 		}
+		a#HamBrgBtn {
+			display: block;
+		}
 		a#Logo {
 			display: block;
-			margin-left: 1vw;
+		}
+		.content {
+			padding: 0 2em;
 		}
 	}
 }

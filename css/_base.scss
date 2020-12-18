@@ -1,6 +1,15 @@
 // _base.scss
 
-$padding_content:	1em 5em 3em 5em;
+$padding: (
+	'content': (
+		'top':		1em,
+		'right':	4em,
+		'bottom':	3em,
+		'left':		4em
+	)
+);
+
+$padding_content:	1em 4em 3em 4em;
 $padding_wrapper:	2em 0;
 
 html {
@@ -22,7 +31,7 @@ body {
 	padding: $padding_wrapper;
 	.content {
 		background-color: Color('white');
-		padding: $padding_content;
+		padding: Array($padding, 'content', 'top') Array($padding, 'content', 'right') Array($padding, 'content', 'bottom') Array($padding, 'content', 'left');
 	}
 }
 @include ViewPort('md') {
@@ -43,7 +52,7 @@ body {
 	#wrapper {
 		padding: 0;
 		.content {
-			padding: .8em 2em;
+			padding: .8em 2em 2em;
 		}
 	}
 }

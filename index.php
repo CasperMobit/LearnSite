@@ -9,8 +9,8 @@
 <?php include('./components/header.html'); ?>
 
 <div class="row" id="wrapper">
-	<div class="col-2 empty"></div>
-	<div class="col-8 content">
+	<div class="col-3"></div>
+	<div class="col-6 content">
 		<h1 class="Heading_HTML"></h1>
 		<h2>1 Structure</h2>
 		<p>The opening <code>&lt;html&gt;</code> tag indicates that anything between it and a closing <code>&lt;/html&gt;</code> tag is HTML code.</p>
@@ -65,8 +65,10 @@
 			<li><a href="https://repl.it/">Repl.it</a></li>
 			<li><a href="https://eloquentjavascript.net/">Eloquent JavaScript</a> - a free e-book that can be used instead of or with JavaScript & JQuery</li>
 	</div>
-	<div class="col-2 empty"></div>
+	<div class="col-3"></div>
 </div>
+
+<?php include('./components/footer.html'); ?>
 
 <script src="scripts/main.js"></script>
 

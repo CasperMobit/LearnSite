@@ -1,0 +1,14 @@
+// _footer.scss
+
+footer {
+    background-color: Color('ink');
+    color: white;
+    font-size: 1em;
+}
+@include ViewPort('xs') {
+    footer {
+        .content {
+            padding-left: 2em;
+        }
+    }
+}

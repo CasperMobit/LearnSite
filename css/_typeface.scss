@@ -6,13 +6,18 @@ $color_meta:			Color('ink', 'lighter');
 $font-family_body:		'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $font-family_meta:		sans-serif;
 
+$font-size: (
+	'code':		1.2em,
+	'h1':		3em
+);
+
 $font-size_h1:			3em;
-$font-size_h1--xs:		8vw;
+$font-size_h1--xs:		3em;
 $font-size_h2:			1.8em;
 $font-size_p:			1.2em;
 $font-size_p--xs:		1.2em;
 $font-size_li:			$font-size_p;
-$font-size_meta:		1.8em;
+$font-size_meta:		1.6em;
 
 $font-weight_h1: 		600;
 $font-weight_h2: 		400;
@@ -30,7 +35,7 @@ $line-height_p--xs:		1.2;
 
 $text-decoration_a:		none;
 
-$text-transform_h1: 	none;
+$text-transform_h1: 	uppercase;
 
 
 /*
@@ -72,6 +77,9 @@ body {
 	color: $color_body;
 	font-family: $font-family_body;
 	line-height: $line-height_body;
+}
+code {
+	font-size: Array($font-size, 'code');
 }
 h1 {
 	font-size: $font-size_h1;

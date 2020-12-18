@@ -1,5 +1,12 @@
 // style.scss
 
+@function Array($array, $element, $key: null) {
+	@if $key {
+		@return map-get(map-get($array, $element), $key);
+	} @else {
+		@return map-get($array, $element);
+	}
+}
 @function Color($name, $shade: null) {
 	$color: #F037C1;
 	// Defined error codes
@@ -217,8 +224,24 @@
 
 @import 'header';
 @import 'base';
+@import 'footer';
 @import 'responsive';
 @import 'typeface';
+
+pre {
+	background-color: Color('sky');
+	border-radius: .6em;
+	display: block;
+	line-height: 1.4;
+	padding: 1em;
+	width: fit-content;
+}
+@include ViewPort('xs') {
+	pre {
+		border-radius: 0;
+		font-size: .6em;
+	}
+}
 
 hr {
 	border-color: Color('sky', 'lighter');

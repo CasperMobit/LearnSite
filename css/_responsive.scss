@@ -25,16 +25,16 @@
 .col-12 {width: ColSize(12);}
 
 @include ViewPort('md') {
-	.col-6, .col-8 {width: ColSize(10);}
-	.col-3, .col-2 {width: ColSize(1)}
+	.col-2 {width: ColSize(1)}
+	.col-3 {width: ColSize(2)}
+	.col-6 {width: ColSize(8)}
+	.col-8 {width: ColSize(10);}
 }
 @include ViewPort('sm') {
-	.col-6 {width: ColSize(10);}
 	.col-3 {width: ColSize(1)}
+	.col-6 {width: ColSize(10);}
 }
 @include ViewPort('xs') {
-	.col-6, .col-8 {width: ColSize(12);}
-	.col-2, .col-3 {
-		display: none;
-	}
+	.col-3 {display: none;}
+	.col-6 {width: ColSize(12);}
 }
