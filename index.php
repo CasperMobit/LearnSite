@@ -46,6 +46,28 @@
 		<?php include('content/css_selectors_table-1.html'); ?>
 
 		<h1>JavaScript</h1>
+		<h2>Short-Circuit Evaluation</h2>
+		<code>
+<pre>
+  let defaultName;
+  if (username) {
+    defaultName = username;
+  } else {
+    defaultName = 'Stranger'
+  }
+</pre>
+		</code>
+		<p>This block can be replaced by</p>
+		<code>
+<pre>
+  let defaultName = username || 'Stranger';
+</pre>
+		</code>
+		<p>This concept is referred to as short-circuit evaluation.</p>
+
+  		<h2>Ternary Operator</h2>
+		<p>We can use a ternary operator to simplify an "if...else" statement.</p>
+
 		<h2>Resources</h2>
 		<ul class="no-indent">
 			<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN Web Docs</a></li>
