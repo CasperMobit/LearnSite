@@ -250,9 +250,14 @@ hr {
 	width: 100%;
 }
 ul {
-	list-style: none;
-	&.no-indent {
+	&.noIndent {
 		padding-left: 0;
+	}
+	&.smallIndent {
+		padding-left: 1.1em;
+	}
+	&.noStyle {
+		list-style: none;
 	}
 }
 

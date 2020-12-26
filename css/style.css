@@ -273,12 +273,12 @@ h2 {
 }
 
 li {
-  font-size: 1.2em;
-  line-height: 1.6;
+  font-size: 1.1em;
+  line-height: 1.4;
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 500;
   line-height: 1.5;
 }
@@ -326,12 +326,16 @@ hr {
   width: 100%;
 }
 
-ul {
-  list-style: none;
+ul.noIndent {
+  padding-left: 0;
 }
 
-ul.no-indent {
-  padding-left: 0;
+ul.smallIndent {
+  padding-left: 1.1em;
+}
+
+ul.noStyle {
+  list-style: none;
 }
 
 .ColorPaletteWrapper {
