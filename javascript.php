@@ -9,12 +9,12 @@
 <?php include('./components/header.html'); ?>
 
 <div class="row" id="wrapper">
-	<div class="col-3"></div>
-	<div class="col-6 content">
+	<div class="col-2"></div>
+	<div class="col-8 content">
 		<h1>Javascript</h1>
 		<script src="js/add-content.js"></script>
 		<script>
-			document.write('<p>This is another way to add HTML using JavaScript</p>');
+			document.write('<p>You can use the "document.write()" method to add HTML using JavaScript</p>');
 
 			var time = new Date();
 			var weekDay = time.getDay();
@@ -47,7 +47,7 @@
 			document.write('<p>' + weekDay + ' ' + day + '.' + month + '.' + year + ' ' + hour + ':' + minute + '</p>');
 		</script>
 	</div>
-	<div class="col3"></div>
+	<div class="col-2"></div>
 </div>
 
 </body>

@@ -35,6 +35,6 @@
 	.col-6 {width: ColSize(10);}
 }
 @include ViewPort('xs') {
-	.col-3 {display: none;}
-	.col-6 {width: ColSize(12);}
+	.col-2, .col-3 {display: none;}
+	.col-6, .col-8 {width: ColSize(12);}
 }
