@@ -3,6 +3,12 @@
 <head>
 	<title>JavaScript</title>
 	<?php require('components/headContent.html');?>
+
+	<script>
+		function myFunction() {
+			document.getElementById("addParagraph").style.display = "flex";
+		}
+	</script>
 </head>
 <body>
 
@@ -13,11 +19,13 @@
 	<div class="col-8 content">
 
 		<h1>Javascript</h1>
+
 		<h2>Contents</h2>
 		<ul class="noStyle smallIndent">
 			<li><a href="#contCreatingModelsUsingData">Creating Models Using Data</a></li>
 			<li><a href="#contExamples">Examples</a></li>
 		</ul>
+
 
 		<h2 id="contCreatingModelsUsingData">Creating Models Using Data</h2>
 
@@ -30,6 +38,19 @@
 			<li>Methods</li>
 		</ul>
 		<p>An object is described using <strong>properties</strong>.</p>
+
+
+		<h2>Variables</h2>
+		<p>There are three types of variables:</p>
+		<dl class="smallIndent" style="max-width:600px;">
+			<dt><code>var</code></dt>
+			<dd>Before 2015, this was the only way to store variables. However, the 2015 version of JS introduced <code>let</code> and <code>const</code> which is meant to replace <code>var</code> in the future.</dd>
+			<dt><code>let</code></dt>
+			<dd>Is the new keyword used to define a variable.</dd>
+			<dt><code>const</code></dt>
+			<dd>Lets you define a variable as a constant.</dd>
+		</dl>
+
 
 		<h2 id="contExamples">Examples</h2>
 		<script src="js/add-content.js"></script>
@@ -66,6 +87,8 @@
 			// Display the date as "Name DD.MM.YY HH:mm"
 			document.write('<p>' + weekDay + ' ' + day + '.' + month + '.' + year + ' ' + hour + ':' + minute + '</p>');
 		</script>
+		<button type="button" onclick="myFunction()" style="font-size:1.1em;">Add paragraph</button>
+		<p id="addParagraph" style="display:none;">Thank you for saving me from the hidden realm!</p>
 	</div>
 	<div class="col-2"></div>
 </div>

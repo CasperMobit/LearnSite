@@ -16,7 +16,7 @@ $font-size_h1--xs:		10vw;
 $font-size_h2:			1.8em;
 $font-size_p:			1.1em;
 $font-size_p--xs:		1.2em;
-$font-size_li:			$font-size_p;
+$font-size_list:		$font-size_p;
 $font-size_meta:		1.6em;
 
 $font-weight_h1: 		600;
@@ -28,7 +28,7 @@ $line-height_body:		1;
 $line-height_h1:		1;
  $add-space-before_h1:	true;
  $space-before-size_h1:	2em;
-$line-height_li:		1.4;
+$line-height_list:		1.4;
 $line-height_meta:		0;
 $line-height_p:			1.5;
 $line-height_p--xs:		1.2;
@@ -96,9 +96,9 @@ h2 {
 	font-size: $font-size_h2;
 	font-weight: $font-weight_h2;
 }
-li {
-	font-size: $font-size_li;
-	line-height: $line-height_li;
+li, dt, dd {
+	font-size: $font-size_list;
+	line-height: $line-height_list;
 }
 p {
 	font-size: $font-size_p;

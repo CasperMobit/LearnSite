@@ -249,7 +249,7 @@ hr {
 	display: inline-block;
 	width: 100%;
 }
-ul {
+ul, ol, dl {
 	&.noIndent {
 		padding-left: 0;
 	}

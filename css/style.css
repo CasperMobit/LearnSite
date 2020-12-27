@@ -78,6 +78,13 @@ body {
   min-width: 360px;
 }
 
+code {
+  background-color: #DFE3E8;
+  border-radius: .1em;
+  color: #454F5B;
+  padding: 0 .2em;
+}
+
 #wrapper {
   padding: 2em 0;
 }
@@ -272,7 +279,7 @@ h2 {
   font-weight: 400;
 }
 
-li {
+li, dt, dd {
   font-size: 1.1em;
   line-height: 1.4;
 }
@@ -326,15 +333,15 @@ hr {
   width: 100%;
 }
 
-ul.noIndent {
+ul.noIndent, ol.noIndent, dl.noIndent {
   padding-left: 0;
 }
 
-ul.smallIndent {
+ul.smallIndent, ol.smallIndent, dl.smallIndent {
   padding-left: 1.1em;
 }
 
-ul.noStyle {
+ul.noStyle, ol.noStyle, dl.noStyle {
   list-style: none;
 }
 

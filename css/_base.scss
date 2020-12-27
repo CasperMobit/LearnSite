@@ -27,6 +27,12 @@ body {
 	position: relative;
 	min-width: 360px;
 }
+code {
+	background-color: Color('sky');
+	border-radius: .1em;
+	color: Color('ink', 'light');
+	padding: 0 .2em;
+}
 #wrapper {
 	padding: $padding_wrapper;
 	.content {
