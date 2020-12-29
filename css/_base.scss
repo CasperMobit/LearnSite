@@ -33,6 +33,37 @@ code {
 	color: Color('ink', 'light');
 	padding: 0 .2em;
 }
+textarea {
+	border-color: Color('main', 'light');
+	border-radius: .3em;
+	color: Color('ink', 'lightest');
+	padding: .6em;
+	width: 100%;
+}
+// Sets TAB width
+textarea, pre {
+    -moz-tab-size : 4;
+      -o-tab-size : 4;
+         tab-size : 4;
+}
+
+#AsciiTable {
+	border-collapse: collapse;
+	td:last-child {
+		min-width: 12em;
+	}
+	td:first-child {
+		min-width: 12em;
+		padding-left: .2em;
+	}
+	th {
+		min-width: 6em;
+	}
+	tr:hover {
+		background-color: Color('sky', 'light');
+	}
+}
+
 #wrapper {
 	padding: $padding_wrapper;
 	.content {

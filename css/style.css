@@ -85,6 +85,41 @@ code {
   padding: 0 .2em;
 }
 
+textarea {
+  border-color: #B3B5CB;
+  border-radius: .3em;
+  color: #919EAB;
+  padding: .6em;
+  width: 100%;
+}
+
+textarea, pre {
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+}
+
+#AsciiTable {
+  border-collapse: collapse;
+}
+
+#AsciiTable td:last-child {
+  min-width: 12em;
+}
+
+#AsciiTable td:first-child {
+  min-width: 12em;
+  padding-left: .2em;
+}
+
+#AsciiTable th {
+  min-width: 6em;
+}
+
+#AsciiTable tr:hover {
+  background-color: #F4F6F8;
+}
+
 #wrapper {
   padding: 2em 0;
 }
@@ -284,6 +319,13 @@ li, dt, dd {
   line-height: 1.4;
 }
 
+li.meta, dt.meta, dd.meta {
+  color: #637381;
+  font-family: sans-serif;
+  font-size: 1.3em;
+  font-weight: 300;
+}
+
 p {
   font-size: 1.1em;
   font-weight: 500;
@@ -294,7 +336,7 @@ p.meta {
   color: #637381;
   font-family: sans-serif;
   font-size: 1.6em;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 0;
 }
 
@@ -331,6 +373,10 @@ hr {
   color: #F9FAFB;
   display: inline-block;
   width: 100%;
+}
+
+ul, ol, dl {
+  max-width: 30em;
 }
 
 ul.noIndent, ol.noIndent, dl.noIndent {

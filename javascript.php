@@ -20,9 +20,10 @@
 
 		<h1>Javascript</h1>
 
-		<h2>Contents</h2>
+		<h2>Content</h2>
 		<ul class="noStyle smallIndent">
 			<li><a href="#contCreatingModelsUsingData">Creating Models Using Data</a></li>
+			<li><a href="#contVariables">Variables</a></li>
 			<li><a href="#contExamples">Examples</a></li>
 		</ul>
 
@@ -40,9 +41,9 @@
 		<p>An object is described using <strong>properties</strong>.</p>
 
 
-		<h2>Variables</h2>
+		<h2 id="contVariables">Variables</h2>
 		<p>There are three types of variables:</p>
-		<dl class="smallIndent" style="max-width:600px;">
+		<dl class="smallIndent">
 			<dt><code>var</code></dt>
 			<dd>Before 2015, this was the only way to store variables. However, the 2015 version of JS introduced <code>let</code> and <code>const</code> which is meant to replace <code>var</code> in the future.</dd>
 			<dt><code>let</code></dt>
@@ -51,8 +52,23 @@
 			<dd>Lets you define a variable as a constant.</dd>
 		</dl>
 
+		<h3>Declaring a variable</h3>
+		<code>var quantity = 3;</code>
+		<p>You can reassign a value to a declared variable:</p>
+		<code>quantity = 5;</code>
+
+		<h3>Data types</h3>
+		<dl>
+			<dt class="meta">Numeric Data Types</dt>
+			<dd>The numeric data type handles numbers.<br><code>0.75</code></dd>
+			<dt class="meta">String Data Type</dt>
+			<dd>The string data type consists of letters and other characters.<br><code>'Hi, Ivy!'</code></dd>
+		</dl>
+
 
 		<h2 id="contExamples">Examples</h2>
+
+		<p><a href="apps/htmlencoder.php">HTML Encoder app</a></p>
 		<script src="js/add-content.js"></script>
 		<script>
 			document.write('<p>You can use the "document.write()" method to add HTML using JavaScript</p>');
@@ -89,6 +105,7 @@
 		</script>
 		<button type="button" onclick="myFunction()" style="font-size:1.1em;">Add paragraph</button>
 		<p id="addParagraph" style="display:none;">Thank you for saving me from the hidden realm!</p>
+
 	</div>
 	<div class="col-2"></div>
 </div>
