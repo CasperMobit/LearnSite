@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Bootstrap</title>
+	<title>Layout</title>
 	<?php require('components/headContent.html');?>
 </head>
 <body>
