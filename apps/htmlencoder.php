@@ -19,7 +19,7 @@
 
         <div style="margin-top:2em;">
             <h3>Result</h3>
-            <div id="htmlEncodeResult">This is the result</div>
+            <div id="htmlEncodeResult" style="line-height:1.5;">This is the result</div>
         </div>
 
     </div>
