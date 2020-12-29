@@ -17,11 +17,12 @@ $font-size_h2:			1.8em;
 $font-size_p:			1.1em;
 $font-size_p--xs:		1.2em;
 $font-size_list:		$font-size_p;
+$font-size_list-meta:	1.3em;
 $font-size_meta:		1.6em;
 
 $font-weight_h1: 		600;
 $font-weight_h2: 		400;
-$font-weight_meta: 		500;
+$font-weight_meta: 		300;
 $font-weight_p: 		500;
 
 $line-height_body:		1;
@@ -99,6 +100,12 @@ h2 {
 li, dt, dd {
 	font-size: $font-size_list;
 	line-height: $line-height_list;
+	&.meta {
+		color: $color_meta;
+		font-family: $font-family_meta;
+		font-size: $font-size_list-meta;
+		font-weight: $font-weight_meta;
+	}
 }
 p {
 	font-size: $font-size_p;

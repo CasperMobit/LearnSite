@@ -250,6 +250,7 @@ hr {
 	width: 100%;
 }
 ul, ol, dl {
+	max-width: 30em;
 	&.noIndent {
 		padding-left: 0;
 	}
