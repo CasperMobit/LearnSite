@@ -6,11 +6,18 @@
 *   Last edit:  29.12.20
 *
 *   Missing features:
-*   -   Output string containing tabs
 *   -   Option to color code elements
 *   -   Several ASCII properties
-*   -   Word wrapping
+*   -   Autocomplete HTML elements
+*   -   Add correct spacing when adding a newline between two HTML elements
+*   -   Autocomplete quotation marks
+*   -   Autocomplete function syntax
+*   -   Option to select intended programming language
 */
+
+// If true, enables console log
+const debug = true;
+if (!debug) {console.log('Debugger disabled');}
 
 // Makes it possible to use TAB-key in text area
 document.getElementById('htmlCodeInput').addEventListener('keydown', function(e) {
@@ -37,43 +44,56 @@ function UpdateResult() {
 
 // Converts textarea string content to escaped HTML
 function HtmlEncode() {
-    let inputString = document.getElementById('htmlCodeInput').value;
-    //return inputString.charCodeAt(0);
+
+    let inputString = document.getElementById('htmlCodeInput').value;   // Get input from text area
+
+    // Exit on empty input
+    if (inputString == null || inputString == "") {
+        alert("Text area can\'t be empty");
+        return '<p>Missing input</p>';
+    }
+
+    // Array containing convertable characters
+    let charList = {
+        '9': '&nbsp;&nbsp;&nbsp;&nbsp;',
+        '10': '&lt;br&gt;<br>',
+        '32': '&amp;&#35;32&#59;',
+        '33': '&amp;&#35;33&#59;',
+        '34': '&amp;quot&#59;',
+        '35': '&amp;&#35;35&#59;',
+        '39': '&amp;&#35;39&#59;',
+        '45': '&amp;&#35;45&#59;',
+        '47': '&amp;&#35;47&#59;',
+        '58': '&amp;&#35;58&#59;',
+        '59': '&amp;&#35;59&#59;',
+        '60': '&amp;lt&#59;',
+        '61': '&amp;&#35;61&#59;',
+        '62': '&amp;gt&#59;',
+        '64': '&amp;&#35;64&#59;'
+    };
+
     let encodedString = '<p>';
+    let currentCharCode;
 
     for (let i = 0; i < inputString.length; i++) {
-        if (inputString.charCodeAt(i) == 9) {
-            encodedString += '&nbsp;&nbsp;&nbsp;&nbsp;';
-        } else if (inputString.charCodeAt(i) == 10) {
-            encodedString += '<br>';
-        } else if (inputString.charCodeAt(i) == 32) {
-            encodedString += '&amp;&#35;32&#59;';
-        } else if (inputString.charCodeAt(i) == 33) {
-            encodedString += '&amp;&#35;33&#59;';
-        } else if (inputString.charCodeAt(i) == 34) {
-            encodedString += '&amp;quot&#59;';
-        } else if (inputString.charCodeAt(i) == 35) {
-            encodedString += '&amp;&#35;35&#59;';
-        } else if (inputString.charCodeAt(i) == 47) {
-            encodedString += '&amp;&#35;47&#59;';
-        } else if (inputString.charCodeAt(i) == 58) {
-            encodedString += '&amp;&#35;58&#59;';
-        } else if (inputString.charCodeAt(i) == 59) {
-            encodedString += '&amp;&#35;59&#59;';
-        } else if (inputString.charCodeAt(i) == 60) {
-            encodedString += '&amp;lt&#59;';
-        } else if (inputString.charCodeAt(i) == 61) {
-            encodedString += '&amp;&#35;61&#59;';
-        } else if (inputString.charCodeAt(i) == 62) {
-            encodedString += '&amp;gt&#59;';
-        } else if (inputString.charCodeAt(i) == 64) {
-            encodedString += '&amp;&#35;64&#59;';
-        } else {
+        currentCharCode = inputString.charCodeAt(i);
+        if (IsSafeAscii(inputString[i])) {  // Checks if char is letter or number
             encodedString += inputString[i];
+            if (debug) {console.log('\"' + inputString[i] + '\"' + ' was safely added');}
+        } else if (charList[currentCharCode]) { // Checks if char is convertable
+            encodedString += charList[currentCharCode];
+            if (debug) {console.log('\"' + inputString[i] + '\"' + ' was converted to \"' + charList[currentCharCode] + '\"');}
+        } else {
+            if (debug) {console.log('ERROR: Process terminated due to invalid input');}
+            return '<p>ASCII value <strong>' + currentCharCode + '</strong> has not yet been added to the encoder</p>';
         }
     }
     encodedString += '</p>';
-    console.log(encodedString);
+    if (debug) {console.log('Returned string: ' + encodedString);}
 
     return encodedString;
+}
+
+function IsSafeAscii(charInput) {
+    return (/^[0-9a-zA-Z]+$/).test(charInput);
 }
