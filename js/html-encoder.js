@@ -9,6 +9,7 @@
 *   -   Output string containing tabs
 *   -   Option to color code elements
 *   -   Several ASCII properties
+*   -   Word wrapping
 */
 
 // Makes it possible to use TAB-key in text area
@@ -38,7 +39,7 @@ function UpdateResult() {
 function HtmlEncode() {
     let inputString = document.getElementById('htmlCodeInput').value;
     //return inputString.charCodeAt(0);
-    let encodedString = [''];
+    let encodedString = '<p>';
 
     for (let i = 0; i < inputString.length; i++) {
         if (inputString.charCodeAt(i) == 9) {
@@ -71,5 +72,8 @@ function HtmlEncode() {
             encodedString += inputString[i];
         }
     }
+    encodedString += '</p>';
+    console.log(encodedString);
+
     return encodedString;
 }

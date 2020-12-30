@@ -15,11 +15,11 @@
         <h1>HTML Encoder</h1>
         <p>Input the text you want to encode:</p>
         <textarea id="htmlCodeInput" rows="10">Type here...</textarea>
-        <button id="submitHtmlBtn">Encode</button>
+        <button id="submitHtmlBtn" style="margin-top:.6rem;">Encode</button>
 
-        <div style="margin-top:2em;">
+        <div style="margin-top:3rem;">
             <h3>Result</h3>
-            <div id="htmlEncodeResult" style="line-height:1.5;">This is the result</div>
+            <div id="htmlEncodeResult" style="overflow-wrap:break-word;"><p>This is the result</p></div>
         </div>
 
     </div>
