@@ -39,6 +39,28 @@ nav {
 		background-color: Color('main', 'dark');
 	}
 }
+.nav-sub-menu {
+	background-color: Color('main', 'light');
+	color: Color('ink');
+	display: none;
+	list-style: none;
+	padding: 0;
+	position: absolute;
+	top: $height_header;
+	&:hover {
+		background-color: Color('main', 'dark');
+		color: inherit;
+	}
+	a {
+		font-size: 1.1rem;
+		padding: 1rem;
+	}
+}
+#nav-link-js:hover {
+	.nav-sub-menu {
+		display: block;
+	}
+}
 #HamBrgBtn {
 	display: none;
 }

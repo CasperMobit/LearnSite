@@ -68,7 +68,7 @@
 
 		<h2 id="contExamples">Examples</h2>
 
-		<p><a href="apps/htmlencoder.php">HTML Encoder app</a></p>
+		<p>Check out my <a href="apps/htmlencoder.php">HTML Encoder</a></p>
 		<script src="js/add-content.js"></script>
 		<script>
 			document.write('<p>You can use the "document.write()" method to add HTML using JavaScript</p>');

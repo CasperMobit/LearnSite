@@ -49,6 +49,30 @@ nav a {
   background-color: #1C2260;
 }
 
+.nav-sub-menu {
+  background-color: #B3B5CB;
+  color: #212B36;
+  display: none;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  top: 4rem;
+}
+
+.nav-sub-menu:hover {
+  background-color: #1C2260;
+  color: inherit;
+}
+
+.nav-sub-menu a {
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+
+#nav-link-js:hover .nav-sub-menu {
+  display: block;
+}
+
 #HamBrgBtn {
   display: none;
 }
