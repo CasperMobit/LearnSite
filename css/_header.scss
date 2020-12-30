@@ -17,12 +17,12 @@ nav {
 		color: inherit;
 	}
 }
-#logo {
+#Logo {
 	font-size: 1.8rem;
 	font-weight: 500;
 	text-transform: none;
 	&:hover {
-		font-weight: 600;
+		color: Color('sky');
 	}
 }
 .nav-links {
@@ -51,7 +51,7 @@ nav {
 	width: 80%;
 }
 @include ViewPort('xs') {
-	#logo {
+	#Logo {
 		margin-left: 1rem;
 	}
 	.nav-links a {

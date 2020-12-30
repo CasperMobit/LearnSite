@@ -33,6 +33,9 @@ code {
 	color: Color('ink', 'light');
 	padding: 0 .2em;
 }
+p {
+	max-width: 50rem;
+}
 textarea {
 	border-color: Color('main', 'light');
 	border-radius: .3em;

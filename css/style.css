@@ -20,14 +20,14 @@ nav a {
   color: inherit;
 }
 
-#logo {
+#Logo {
   font-size: 1.8rem;
   font-weight: 500;
   text-transform: none;
 }
 
-#logo:hover {
-  font-weight: 600;
+#Logo:hover {
+  color: #DFE3E8;
 }
 
 .nav-links {
@@ -63,7 +63,7 @@ nav a {
 }
 
 @media screen and (max-width: 767px) {
-  #logo {
+  #Logo {
     margin-left: 1rem;
   }
   .nav-links a {
@@ -107,6 +107,10 @@ code {
   border-radius: .1em;
   color: #454F5B;
   padding: 0 .2em;
+}
+
+p {
+  max-width: 50rem;
 }
 
 textarea {
@@ -314,7 +318,7 @@ a {
 
 body {
   color: #212B36;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1;
 }
 
