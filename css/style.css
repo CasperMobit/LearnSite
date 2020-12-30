@@ -132,16 +132,16 @@ textarea, pre {
 }
 
 #AsciiTable td:last-child {
-  min-width: 12em;
+  min-width: 12rem;
 }
 
 #AsciiTable td:first-child {
-  min-width: 12em;
-  padding-left: .2em;
+  min-width: 12rem;
+  padding-left: .2rem;
 }
 
 #AsciiTable th {
-  min-width: 6em;
+  min-width: 6rem;
 }
 
 #AsciiTable tr:hover {
@@ -149,12 +149,12 @@ textarea, pre {
 }
 
 #wrapper {
-  padding: 2em 0;
+  padding: 2rem 0rem 2rem 0rem;
 }
 
 #wrapper .content {
   background-color: #FFFFFF;
-  padding: 1em 4em 3em 4em;
+  padding: 1rem 4rem 3rem 4rem;
 }
 
 @media screen and (max-width: 1199px) {

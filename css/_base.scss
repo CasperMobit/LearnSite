@@ -2,15 +2,18 @@
 
 $padding: (
 	'content': (
-		'top':		1em,
-		'right':	4em,
-		'bottom':	3em,
-		'left':		4em
+		'top':		1rem,
+		'right':	4rem,
+		'bottom':	3rem,
+		'left':		4rem
+	),
+	'wrapper': (
+		'top':		2rem,
+		'right':	0rem,
+		'bottom':	2rem,
+		'left':		0rem
 	)
 );
-
-$padding_content:	1em 4em 3em 4em;
-$padding_wrapper:	2em 0;
 
 html {
 	height: 100%;
@@ -53,14 +56,14 @@ textarea, pre {
 #AsciiTable {
 	border-collapse: collapse;
 	td:last-child {
-		min-width: 12em;
+		min-width: 12rem;
 	}
 	td:first-child {
-		min-width: 12em;
-		padding-left: .2em;
+		min-width: 12rem;
+		padding-left: .2rem;
 	}
 	th {
-		min-width: 6em;
+		min-width: 6rem;
 	}
 	tr:hover {
 		background-color: Color('sky', 'light');
@@ -68,7 +71,7 @@ textarea, pre {
 }
 
 #wrapper {
-	padding: $padding_wrapper;
+	padding: Array($padding, 'wrapper', 'top') Array($padding, 'wrapper', 'right') Array($padding, 'wrapper', 'bottom') Array($padding, 'wrapper', 'left');
 	.content {
 		background-color: Color('white');
 		padding: Array($padding, 'content', 'top') Array($padding, 'content', 'right') Array($padding, 'content', 'bottom') Array($padding, 'content', 'left');
