@@ -50,8 +50,8 @@ nav a {
 }
 
 .nav-sub-menu {
-  background-color: #B3B5CB;
-  color: #212B36;
+  background-color: #43467F;
+  color: #FFFFFF;
   display: none;
   list-style: none;
   padding: 0;
@@ -60,7 +60,6 @@ nav a {
 }
 
 .nav-sub-menu:hover {
-  background-color: #1C2260;
   color: inherit;
 }
 

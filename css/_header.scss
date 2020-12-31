@@ -40,15 +40,14 @@ nav {
 	}
 }
 .nav-sub-menu {
-	background-color: Color('main', 'light');
-	color: Color('ink');
+	background-color: Color('main');
+	color: Color('white');
 	display: none;
 	list-style: none;
 	padding: 0;
 	position: absolute;
 	top: $height_header;
 	&:hover {
-		background-color: Color('main', 'dark');
 		color: inherit;
 	}
 	a {
