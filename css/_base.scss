@@ -1,5 +1,16 @@
 // _base.scss
 
+$height: (
+	'Hero-height':	60vh
+);
+$margin: (
+	'content': (
+		'top':		2rem,
+		'right':	0rem,
+		'bottom':	0rem,
+		'left':		0rem
+	)
+);
 $padding: (
 	'content': (
 		'top':		1rem,
@@ -8,7 +19,7 @@ $padding: (
 		'left':		4rem
 	),
 	'wrapper': (
-		'top':		2rem,
+		'top':		0rem,
 		'right':	0rem,
 		'bottom':	2rem,
 		'left':		0rem
@@ -69,12 +80,19 @@ textarea, pre {
 		background-color: Color('sky', 'light');
 	}
 }
-
 #wrapper {
 	padding: Array($padding, 'wrapper', 'top') Array($padding, 'wrapper', 'right') Array($padding, 'wrapper', 'bottom') Array($padding, 'wrapper', 'left');
 	.content {
 		background-color: Color('white');
+		margin: Array($margin, 'content', 'top') Array($margin, 'content', 'right') Array($margin, 'content', 'bottom') Array($margin, 'content', 'left');
 		padding: Array($padding, 'content', 'top') Array($padding, 'content', 'right') Array($padding, 'content', 'bottom') Array($padding, 'content', 'left');
+	}
+}
+#Hero-home {
+	background-color: Color('ink');
+	color: Color('white');
+	img {
+		width: 100%;
 	}
 }
 @include ViewPort('md') {

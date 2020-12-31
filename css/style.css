@@ -173,12 +173,22 @@ textarea, pre {
 }
 
 #wrapper {
-  padding: 2rem 0rem 2rem 0rem;
+  padding: 0rem 0rem 2rem 0rem;
 }
 
 #wrapper .content {
   background-color: #FFFFFF;
+  margin: 2rem 0rem 0rem 0rem;
   padding: 1rem 4rem 3rem 4rem;
+}
+
+#Hero-home {
+  background-color: #212B36;
+  color: #FFFFFF;
+}
+
+#Hero-home img {
+  width: 100%;
 }
 
 @media screen and (max-width: 1199px) {
