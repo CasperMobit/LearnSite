@@ -3,7 +3,7 @@
 *   
 *   Written by: Casper Tollefsen
 *   Date:       28.12.20
-*   Last edit:  31.12.20
+*   Last edit:  02.01.21
 *
 *   Missing features:
 *   -   Option to color code elements
@@ -54,8 +54,6 @@ function HtmlEncode() {
 
     // Array containing convertable characters
     let charList = {
-        '9': '&nbsp;&nbsp;&nbsp;&nbsp;',    // 4 unbreaking spaces
-        '10': '&lt;br&gt;<br>',             // newline
         '32': '&amp;&#35;32&#59;',          // space
         '33': '&amp;&#35;33&#59;',          // !
         '34': '&amp;quot&#59;',             // "
@@ -100,23 +98,56 @@ function HtmlEncode() {
         '248': '&amp;oslash&#59;'           // ø
     };
 
-    let encodedString = '<p>';
+    let encodedString = '<p>&lt;div&#32;class&#61;&quot;codeBlock&quot;&gt;';
     let currentCharCode;
+    let indentSize = 0;
 
     for (let i = 0; i < inputString.length; i++) {
         currentCharCode = inputString.charCodeAt(i);
-        if (IsSafeAscii(inputString[i])) {  // Checks if char is letter or number
+
+        // Checks if char is letter or number
+        if (IsSafeAscii(inputString[i])) {
             encodedString += inputString[i];
-            if (debug) {console.log('\"' + inputString[i] + '\"' + ' was safely added');}
-        } else if (charList[currentCharCode]) { // Checks if char is convertable
+            if (debug) {console.log('\"' + inputString[i] + '\" was safely added');}
+        }
+        // Checks if char is convertable
+        else if (charList[currentCharCode]) {
             encodedString += charList[currentCharCode];
-            if (debug) {console.log('\"' + inputString[i] + '\"' + ' was converted to \"' + charList[currentCharCode] + '\"');}
-        } else {
+            if (debug) {console.log('\"' + inputString[i] + '\" was converted to \"' + charList[currentCharCode] + '\"');}
+        }
+        // Checks if char is a TAB
+        else if (currentCharCode == 9) {
+            if (inputString.charCodeAt(i+1) == 9) {
+                console.log('This TAB is skipped');
+                indentSize++;
+            } else {
+                indentSize++;
+                encodedString += '&lt;span&#32;style&#61;&quot;margin&#45;left&#58;' + (indentSize * 2) + 'rem&#59;&quot;&gt;';
+                if (debug) {console.log('\"' + inputString[i] + '\" was converted to \"&lt;span&#32;style&#61;&quot;margin&#45;left&#58;' + (indentSize * 2) + 'rem&#59;&quot;&gt;\", and \'indentSize\' = ' + indentSize);}
+            }
+        }
+        // Checks if char is a newline
+        else if (currentCharCode == 10) {
+            if (indentSize > 0) {
+                encodedString += '&lt;&#47;span&gt;&lt;br&gt;';
+                indentSize = 0;
+                if (debug) {console.log('\"' + inputString[i] + '\" was converted to \" &lt;&#47;span&gt;&lt;br&gt;<br>\", and \'indentSize\' = ' + indentSize);}
+            } else {
+                encodedString += '&lt;br&gt;';
+                if (debug) {console.log('\"' + inputString[i] + '\" was converted to \"&lt;br&gt;<br>\"');}
+            }
+        }
+        else {
             if (debug) {console.log('ERROR: Process terminated due to invalid input');}
-            return '<p>ASCII value <strong>' + currentCharCode + '</strong> has not yet been added to the encoder</p>';
+            return '<>ASCII value <strong>' + currentCharCode + '</strong> has not yet been added to the encoder</>';
         }
     }
-    encodedString += '</p>';
+    // Adds remaining </span> tags
+    while (indentSize > 0) {
+        encodedString += '&lt;&#47;span&gt;';
+        indentSize--;
+    }
+    encodedString += '&lt;&#47;div&gt;</p>';
     if (debug) {console.log('Returned string: ' + encodedString);}
 
     return encodedString;
