@@ -40,7 +40,7 @@ nav {
 	}
 }
 .nav-sub-menu {
-	background-color: Color('main');
+	background-color: Color('main', 'dark');
 	color: Color('white');
 	display: none;
 	list-style: none;

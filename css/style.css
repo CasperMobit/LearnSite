@@ -50,7 +50,7 @@ nav a {
 }
 
 .nav-sub-menu {
-  background-color: #43467F;
+  background-color: #1C2260;
   color: #FFFFFF;
   display: none;
   list-style: none;
@@ -112,7 +112,7 @@ html {
 }
 
 body {
-  background-color: #DFE3E8;
+  background-color: #FFFFFF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,11 +125,24 @@ body {
   min-width: 360px;
 }
 
-code {
+code, .codeBlock {
   background-color: #DFE3E8;
-  border-radius: .1em;
   color: #454F5B;
-  padding: 0 .2em;
+  font-family: monospace;
+}
+
+code {
+  border-radius: .2em;
+  padding: 0 .4em;
+}
+
+.codeBlock {
+  border-radius: .4rem;
+  line-height: 1.2rem;
+  padding: 1.2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 p {
@@ -148,6 +161,16 @@ textarea, pre {
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  padding: 10vh 0 10vh 0;
+  text-align: center;
+}
+
+.noTopMargin {
+  margin-top: 0 !important;
 }
 
 #AsciiTable {
@@ -176,7 +199,6 @@ textarea, pre {
 }
 
 #wrapper .content {
-  background-color: #FFFFFF;
   margin: 2rem 0rem 0rem 0rem;
   padding: 1rem 4rem 3rem 4rem;
 }
@@ -355,7 +377,7 @@ body {
   line-height: 1;
 }
 
-code {
+code, .codeBlock {
   font-size: 1.2em;
 }
 

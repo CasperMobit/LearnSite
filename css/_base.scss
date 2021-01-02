@@ -34,18 +34,27 @@ html {
 * {box-sizing: border-box;}
 
 body {
-	background-color: Color('sky');
+	background-color: Color('white');
 	display: flex;
 	flex-direction: column;
 	margin: 0;
 	position: relative;
 	min-width: 360px;
 }
-code {
+code, .codeBlock {
 	background-color: Color('sky');
-	border-radius: .1em;
 	color: Color('ink', 'light');
-	padding: 0 .2em;
+	font-family: monospace;
+}
+code {
+	border-radius: .2em;
+	padding: 0 .4em;
+}
+.codeBlock {
+	border-radius: .4rem;
+	line-height: 1.2rem;
+	padding: 1.2rem;
+	width: fit-content;
 }
 p {
 	max-width: 50rem;
@@ -62,6 +71,15 @@ textarea, pre {
     -moz-tab-size : 4;
       -o-tab-size : 4;
          tab-size : 4;
+}
+
+.heroTitle {
+	font-size: 4rem;
+	padding: 10vh 0 10vh 0;
+	text-align: center;
+}
+.noTopMargin {
+	margin-top: 0 !important;
 }
 
 #AsciiTable {
@@ -83,7 +101,6 @@ textarea, pre {
 #wrapper {
 	padding: Array($padding, 'wrapper', 'top') Array($padding, 'wrapper', 'right') Array($padding, 'wrapper', 'bottom') Array($padding, 'wrapper', 'left');
 	.content {
-		background-color: Color('white');
 		margin: Array($margin, 'content', 'top') Array($margin, 'content', 'right') Array($margin, 'content', 'bottom') Array($margin, 'content', 'left');
 		padding: Array($padding, 'content', 'top') Array($padding, 'content', 'right') Array($padding, 'content', 'bottom') Array($padding, 'content', 'left');
 	}
