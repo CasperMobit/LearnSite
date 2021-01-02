@@ -30,6 +30,7 @@
 
 			<h1 class="Heading_HTML" id="contHtml"></h1>
 			<h2>1 Structure</h2>
+			<div class="codeBlock">&lt;&#33;DOCTYPE&#32;html&gt;<br>&lt;html&gt;<br><span style="margin-left:2rem;">&lt;head&gt;</span><br><span style="margin-left:4rem;">&lt;title&gt;LearnSite&lt;&#47;title&gt;</span><br><span style="margin-left:2rem;">&lt;&#47;head&gt;</span><br><span style="margin-left:2rem;">&lt;body&gt;</span><br><span style="margin-left:4rem;">&lt;h1&gt;Welcome&#32;to&#32;LearnSite&lt;&#47;h1&gt;</span><br><span style="margin-left:2rem;">&lt;&#47;body&gt;</span><br>&lt;&#47;html&gt;</div>
 			<p>The opening <code>&lt;html&gt;</code> tag indicates that anything between it and a closing <code>&lt;/html&gt;</code> tag is HTML code.</p>
 			<p>The <code>&lt;body&gt;</code> tag indicates that anything between it and the closing <code>&lt;/body&gt;</code> tag should be shown inside the main browser window.</p>
 			<p>Words between <code>&lt;h1&gt;</code> and <code>&lt;/h1&gt;</code> are a main heading.</p>
@@ -62,22 +63,9 @@
 
 			<h1 id="contJavascript">JavaScript</h1>
 			<h2>Short-Circuit Evaluation</h2>
-			<code>
-<pre>
-let defaultName;
-if (username) {
-	defaultName = username;
-} else {
-	defaultName = 'Stranger'
-}
-</pre>
-			</code>
+			<div class="codeBlock">let&#32;defaultName&#59;<br>if&#32;&#40;username&#41;&#32;&#123;<br><span style="margin-left:2rem;">defaultName&#32;&#61;&#32;username&#59;</span><br>&#125;&#32;else&#32;&#123;<br><span style="margin-left:2rem;">defaultName&#32;&#61;&#32;&#39;Stranger&#39;</span><br>&#125;</div>
 			<p>This block can be replaced by</p>
-			<code>
-<pre>
-let defaultName = username || 'Stranger';
-</pre>
-			</code>
+			<div class="codeBlock">let&#32;defaultName&#32;&#61;&#32;username&#32;&#124;&#124;&#32;&#39;Stranger&#39;&#59;</div>
 			<p>This concept is referred to as short-circuit evaluation.</p>
 
 			<h2>Ternary Operator</h2>

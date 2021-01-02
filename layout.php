@@ -45,39 +45,18 @@
 		<h2>Sass</h2>
 		<h3>Making Arrays</h3>
 		<p>Function structure:</p>
-		<code>
-<pre>
-@function MyFunction($array, $element, $key: null) {
-  @if $key {
-    @return map-get(map-get($array, $element), $key);
-  } @else {
-    @return map-get($array, $element);
-  }
-}
-</pre>
-		</code>
+		<div class="codeBlock">&#64;function&#32;MyFunction&#40;&#36;array&#44;&#32;&#36;element&#44;&#32;&#36;key&#58;&#32;null&#41;&#32;&#123;<br><span style="margin-left:2rem;">&#64;if&#32;&#36;key&#32;&#123;</span><br><span style="margin-left:4rem;">&#64;return&#32;map&#45;get&#40;map&#45;get&#40;&#36;array&#44;&#32;&#36;element&#41;&#44;&#32;&#36;key&#41;&#59;</span><br><span style="margin-left:2rem;">&#125;&#32;&#64;else&#32;&#123;</span><br><span style="margin-left:4rem;">&#64;return&#32;map&#45;get&#40;&#36;array&#44;&#32;&#36;element&#41;&#59;</span><br><span style="margin-left:2rem;">&#125;</span><br>&#125;</div>
+
 		<p>Array structure:</p>
-		<code>
-<pre>
-$myArray: (
-  'element-1': 20px,
-  'element-2': 40px,
-  'element-3': (
-    'key-1': 2em,
-    'key-2': 4em
-	)
-);
-</pre>
-		</code>
+		<div class="codeBlock">&#36;myArray&#58;&#32;&#40;<br><span style="margin-left:2rem;">&#39;element&#45;1&#39;&#58;&#32;20px&#44;</span><br><span style="margin-left:2rem;">&#39;element&#45;2&#39;&#58;&#32;40px&#44;</span><br><span style="margin-left:2rem;">&#39;element&#45;3&#39;&#58;&#32;&#40;</span><br><span style="margin-left:4rem;">&#39;key&#45;1&#39;&#58;&#32;2em&#44;</span><br><span style="margin-left:4rem;">&#39;key&#45;2&#39;&#58;&#32;4em</span><br><span style="margin-left:2rem;">&#41;</span><br>&#41;&#59;</div>
+
 		<p>You can now call for any value within the array structure using:</p>
-		<code>
-<pre>
-MyFunction($myArray, 'element-1')	    // 20px
-MyFunction($myArray, 'element-2')	    // 40px
-MyFunction($myArray, 'element-3', 'key-1')  // 2em
-MyFunction($myArray, 'element-3', 'key-1')  // 4em
-</pre>
-		</code>
+		<div class="codeBlock">
+			MyFunction&#40;&#36;myArray&#44;&#32;&#39;element&#45;1&#39;&#41;<span style="margin-left:7.3rem;">&#47;&#47;&#32;20px</span><br>
+			MyFunction&#40;&#36;myArray&#44;&#32;&#39;element&#45;2&#39;&#41;<span style="margin-left:7.3rem;">&#47;&#47;&#32;40px</span><br>
+			MyFunction&#40;&#36;myArray&#44;&#32;&#39;element&#45;3&#39;&#44;&#32;&#39;key&#45;1&#39;&#41;<span style="margin-left:2rem;">&#47;&#47;&#32;2em</span><br>
+			MyFunction&#40;&#36;myArray&#44;&#32;&#39;element&#45;3&#39;&#44;&#32;&#39;key&#45;1&#39;&#41;<span style="margin-left:2rem;">&#47;&#47;&#32;4em</span>
+		</div>
 	</div>
 	<div class="col-2"></div>
 </div>
