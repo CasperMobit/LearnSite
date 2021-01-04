@@ -153,6 +153,5 @@ function HtmlEncode() {
     return encodedString;
 }
 
-function IsSafeAscii(charInput) {
-    return (/^[0-9a-zA-Z]+$/).test(charInput);
-}
+// This is an Arrow Function
+IsSafeAscii = charInput => (/^[0-9a-zA-Z]+$/).test(charInput);
