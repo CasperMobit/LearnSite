@@ -228,21 +228,6 @@
 @import 'responsive';
 @import 'typeface';
 
-pre {
-	background-color: Color('sky');
-	border-radius: .6em;
-	display: block;
-	line-height: 1.4;
-	padding: 1em;
-	width: fit-content;
-}
-@include ViewPort('xs') {
-	pre {
-		border-radius: 0;
-		font-size: .6em;
-	}
-}
-
 hr {
 	border-color: Color('sky', 'lighter');
 	color: Color('sky', 'lighter');
