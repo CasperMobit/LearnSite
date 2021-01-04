@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Layout</title>
+	<title>Layout | LearnSite</title>
 	<?php require('components/headContent.html');?>
 </head>
 <body>

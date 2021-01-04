@@ -20,7 +20,6 @@ nav {
 #Logo {
 	font-size: 1.8rem;
 	font-weight: 500;
-	text-transform: none;
 	&:hover {
 		color: Color('sky');
 	}
@@ -61,15 +60,32 @@ nav {
 	}
 }
 #HamBrgBtn {
+	background-color: Color('main');
+	border-color: Color('white');
+	border-style: solid;
+	border-radius: .2rem;
+	color: Color('white');
+	cursor: pointer;
 	display: none;
+	height: 2rem;
+	margin-right: 1rem;
+	width: 2rem;
 }
 #HamBrgMenu {
-	background-color: mediumaquamarine;
+	background-color: Color('main');
 	display: none;
-	height: 100%;
-	left: 20%;
-	position: fixed;
-	width: 80%;
+	left: 40%;
+	padding: 0rem 2rem;
+	position: absolute;
+	top: $height_header;
+	width: 60%;
+	* {
+		color: Color('white');
+		font-size: $font-size_nav-links;
+	}
+}
+.show {
+	display: block !important;
 }
 @include ViewPort('xs') {
 	#Logo {
@@ -80,8 +96,5 @@ nav {
 	}
 	#HamBrgBtn {
 		display: block;
-	}
-	#HamBrgMenu {
-		display: none;
 	}
 }

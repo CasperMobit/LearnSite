@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Home</title>
+	<title>Home | LearnSite</title>
 	<?php require('components/headContent.html');?>
 </head>
 <body>
@@ -18,9 +18,11 @@
 		<div class="col-2"></div>
 		<div class="col-8 content">
 			<h1>Welcome to LearnSite!</h1>
+			<p>Hi!<br>My name is Casper Tollefsen and I'm the author, designer, and developer of this website.</p>
+			<p>Here you'll find the code I've developed while learning web-development.</p>
 
 			<h2>Content</h2>
-			<ul class="noStyle smallIndent">
+			<ul class="noStyle noIndent">
 				<li><a href="#contHtml">HTML</a></li>
 				<li><a href="#contCss">CSS</a></li>
 				<li><a href="#contJavascript">JavaScript</a></li>
@@ -70,13 +72,6 @@
 
 			<h2>Ternary Operator</h2>
 			<p>We can use a ternary operator to simplify an "if...else" statement.</p>
-
-			<h2>Resources</h2>
-			<ul class="no-indent">
-				<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN Web Docs</a></li>
-				<li><a href="https://developers.google.com/web/tools/chrome-devtools/console/javascript">Get Started with Running JavaScript in The Console</a></li>
-				<li><a href="https://repl.it/">Repl.it IDE</a> - Repl.it is an online IDE for writing and running code in a number of programming languages, including JavaScript. This is helpful if you want to edit and share code right from your browser.</li>
-			</ul>
 
 
 			<h1 id="contAsciiTable">ASCII Table</h1>	

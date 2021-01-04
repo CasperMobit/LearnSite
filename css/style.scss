@@ -250,12 +250,12 @@ hr {
 	width: 100%;
 }
 ul, ol, dl {
-	max-width: 30em;
+	max-width: 30rem;
 	&.noIndent {
 		padding-left: 0;
 	}
 	&.smallIndent {
-		padding-left: 1.1em;
+		padding-left: 1.1rem;
 	}
 	&.noStyle {
 		list-style: none;

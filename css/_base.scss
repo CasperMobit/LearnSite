@@ -34,7 +34,7 @@ html {
 * {box-sizing: border-box;}
 
 body {
-	background-color: Color('white');
+	background-color: Color('sky');
 	display: flex;
 	flex-direction: column;
 	margin: 0;
@@ -61,9 +61,9 @@ p {
 }
 textarea {
 	border-color: Color('main', 'light');
-	border-radius: .3em;
+	border-radius: .3rem;
 	color: Color('ink', 'lightest');
-	padding: .6em;
+	padding: .6rem;
 	width: 100%;
 }
 // Sets TAB width
@@ -101,6 +101,8 @@ textarea, pre {
 #wrapper {
 	padding: Array($padding, 'wrapper', 'top') Array($padding, 'wrapper', 'right') Array($padding, 'wrapper', 'bottom') Array($padding, 'wrapper', 'left');
 	.content {
+		background-color: Color('white');
+		border-radius: .4rem;
 		margin: Array($margin, 'content', 'top') Array($margin, 'content', 'right') Array($margin, 'content', 'bottom') Array($margin, 'content', 'left');
 		padding: Array($padding, 'content', 'top') Array($padding, 'content', 'right') Array($padding, 'content', 'bottom') Array($padding, 'content', 'left');
 	}
@@ -115,22 +117,27 @@ textarea, pre {
 @include ViewPort('md') {
 	#wrapper {
 		.content {
-			padding: 1em 4em;
+			padding: 1rem 4rem;
 		}
 	}
 }
 @include ViewPort('sm') {
 	#wrapper {
 		.content {
-			padding: 1em 3em;
+			padding: 1rem 3rem;
 		}
 	}
 }
 @include ViewPort('xs') {
+	.heroTitle {
+		font-size: 3rem;
+	}
 	#wrapper {
 		padding: 0;
 		.content {
-			padding: .8em 2em 2em;
+			border-radius: 0;
+			margin-top: 0;
+			padding: 0rem 2rem 2rem;
 		}
 	}
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>HTML Encoder</title>
+	<title>HTML Encoder | LearnSite</title>
 	<?php require('../components/headContent.html');?>
 </head>
 <body>
@@ -16,7 +16,7 @@
         <p class="meta">Converts text to escaped HTML code</p>
         <p>Input the text you want to encode:</p>
         <textarea id="htmlCodeInput" rows="10">Type here...</textarea>
-        <button id="submitHtmlBtn" style="margin-top:.6rem;">Encode</button>
+        <button id="submitHtmlBtn" style="font-size:1rem; margin-top:.6rem;">Encode</button>
 
         <div style="margin-top:3rem;">
             <h3>Result</h3>
@@ -28,6 +28,9 @@
     </div>
     <div class="col-2"></div>
 </div>
+
+<!-- FOOTER -->
+<?php include('../components/footer.html'); ?>
 
 <script src="../js/html-encoder.js"></script>
 </body>

@@ -27,12 +27,12 @@ $font-weight_p: 		500;
 
 $line-height_body:		1;
 $line-height_h1:		1;
- $add-space-before_h1:	true;
- $space-before-size_h1:	2em;
 $line-height_list:		1.4;
-$line-height_meta:		0;
+$line-height_meta:		1.2;
 $line-height_p:			1.5;
 $line-height_p--xs:		1.2;
+
+$magin-top_h1:			4rem;
 
 $text-decoration_a:		none;
 
@@ -86,12 +86,8 @@ h1 {
 	font-size: $font-size_h1;
 	font-weight: $font-weight_h1;
 	line-height: $line-height_h1;
+	margin-top: $magin-top_h1;
 	text-transform: $text-transform_h1;
-	&:not(:first-child) {
-		@if $add-space-before_h1 {
-			margin-top: $space-before-size_h1;
-		}
-	}
 }
 h2 {
 	font-size: $font-size_h2;
