@@ -60,6 +60,7 @@ nav {
 	}
 }
 #HamBrgBtn {
+	@include size(2rem, 2rem);
 	background-color: Color('main');
 	border-color: Color('white');
 	border-style: solid;
@@ -67,9 +68,7 @@ nav {
 	color: Color('white');
 	cursor: pointer;
 	display: none;
-	height: 2rem;
 	margin-right: 1rem;
-	width: 2rem;
 }
 #HamBrgMenu {
 	background-color: Color('main');
