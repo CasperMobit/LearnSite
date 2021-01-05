@@ -3,16 +3,10 @@
 <head>
 	<title>JavaScript | LearnSite</title>
 	<?php require('components/headContent.html');?>
-
-	<script>
-		function myFunction() {
-			document.getElementById("addParagraph").style.display = "flex";
-		}
-	</script>
 </head>
 <body>
 
-<?php include('./components/header.html'); ?>
+<header id="Header"></header>
 
 <div id="wrapper">
 	<div class="row">
@@ -92,6 +86,8 @@
 <!-- FOOTER -->
 <?php include('./components/footer.html'); ?>
 
+<!-- Load JavaScript -->
 <script src="./js/javascript-page.js"></script>
+<script src="scripts/main.js"></script>
 </body>
 </html>

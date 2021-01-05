@@ -1,3 +1,5 @@
+"use strict";
+
 var contBrowserObjModel =
     '<h2>The Browser Object Model</h2>' +
     '<p>window.location = ' + window.location +
@@ -16,6 +18,11 @@ var contDocObjModel =
     '</p>';
 
 document.getElementById('test').innerHTML = contBrowserObjModel + contDocObjModel;
+/*
+var client = {
+    width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+
+};*/
 
 function User(firstName, lastName) {
     this.firstName = firstName;
