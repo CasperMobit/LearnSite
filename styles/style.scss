@@ -198,25 +198,6 @@
 	$value: 100% / $value;
 	@return $value;
 }
-@mixin ViewPort($size) {
-	@if $size == 'lg' {
-		@media screen and (min-width: 1200px) {
-			@content;
-		}
-	} @else if $size == 'md' {
-		@media screen and (max-width: 1199px) {
-			@content;
-		}
-	} @else if $size == 'sm' {
-		@media screen and (max-width: 991px) {
-			@content;
-		}
-	} @else if $size == 'xs' {
-		@media screen and (max-width: 767px) {
-			@content;
-		}
-	}
-}
 @mixin size($width, $height) {
 	height: $height;
 	width: $width;

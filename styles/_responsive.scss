@@ -1,5 +1,24 @@
 // _responsive.scss
 
+@mixin ViewPort($size) {
+	@if $size == 'lg' {
+		@media screen and (min-width: 1300px) {
+			@content;
+		}
+	} @else if $size == 'md' {
+		@media screen and (max-width: 1299px) {
+			@content;
+		}
+	} @else if $size == 'sm' {
+		@media screen and (max-width: 991px) {
+			@content;
+		}
+	} @else if $size == 'xs' {
+		@media screen and (max-width: 767px) {
+			@content;
+		}
+	}
+}
 .row::after {
 	content: "";
 	clear: both;
