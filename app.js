@@ -1,5 +1,5 @@
 console.clear();
-console.log("\nProgram started");
+console.log("\n[Program started]");
 
 const fs = require('fs');
 
@@ -14,7 +14,7 @@ fs.access(testFile, fs.constants.F_OK | fs.constants.W_OK, (err) => {
     }
 });
 
-console.log(fs.constants);
+//console.log(fs.constants);
 
 // for (let i = 0; i < readMe.length; i++)
 //     console.log(readMe[i]);
