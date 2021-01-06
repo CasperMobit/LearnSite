@@ -87,7 +87,7 @@
 <?php include('components/footer.html'); ?>
 
 <!-- Load JavaScript -->
-<script src="js/javascript-page.js"></script>
+<script src="scripts/javascript-page.js"></script>
 <script src="scripts/main.js"></script>
 </body>
 </html>

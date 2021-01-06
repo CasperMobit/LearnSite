@@ -32,6 +32,6 @@
 <!-- FOOTER -->
 <?php include('../components/footer.html'); ?>
 
-<script src="../js/html-encoder.js"></script>
+<script src="../scripts/html-encoder.js"></script>
 </body>
 </html>
