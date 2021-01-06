@@ -167,9 +167,15 @@ p {
 textarea {
   border-color: #B3B5CB;
   border-radius: .3rem;
+  border-style: solid;
   color: #919EAB;
   padding: .6rem;
   width: 100%;
+  max-width: 40rem;
+}
+
+textarea:focus {
+  border-color: #006FBB;
 }
 
 textarea, pre {
@@ -227,6 +233,20 @@ textarea, pre {
 
 #Hero-home img {
   width: 100%;
+}
+
+#submitHtmlBtn {
+  background-color: inherit;
+  border-color: #B3B5CB;
+  border-radius: .3rem;
+  border-style: solid;
+  color: #212B36;
+  cursor: pointer;
+  padding: .2rem .6rem;
+}
+
+#submitHtmlBtn:hover {
+  background-color: #F4F6F8;
 }
 
 @media screen and (max-width: 1299px) {

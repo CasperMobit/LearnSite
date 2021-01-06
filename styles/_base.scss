@@ -62,9 +62,14 @@ p {
 textarea {
 	border-color: Color('main', 'light');
 	border-radius: .3rem;
+	border-style: solid;
 	color: Color('ink', 'lightest');
 	padding: .6rem;
 	width: 100%;
+	max-width: 40rem;
+	&:focus {
+		border-color: Color('blue');
+	}
 }
 // Sets TAB width
 textarea, pre {
@@ -114,6 +119,19 @@ textarea, pre {
 		width: 100%;
 	}
 }
+#submitHtmlBtn {
+	background-color: inherit;
+	border-color: Color('main', 'light');
+	border-radius: .3rem;
+	border-style: solid;
+	color: Color('ink');
+	cursor: pointer;
+	padding: .2rem .6rem;
+	&:hover {
+		background-color: Color('sky', 'light');
+	}
+}
+
 @include ViewPort('md') {
 	#wrapper {
 		.content {
