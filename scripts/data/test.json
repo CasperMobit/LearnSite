@@ -1,0 +1,12 @@
+{
+    "contentFiles": [
+        {
+            "name": "ascii-table.html",
+            "path": "common/content/"
+        },
+        {
+            "name": "color-palettes.html",
+            "path": "common/content/"
+        }
+    ]
+}
