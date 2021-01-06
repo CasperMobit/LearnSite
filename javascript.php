@@ -67,7 +67,7 @@
 
 			<h1 id="contExamples">Examples</h1>
 
-			<p>Check out my <a href="apps/htmlencoder.php">HTML Encoder</a></p>
+			<p>Check out my <a href="apps/html-encoder.php">HTML Encoder</a></p>
 
 			<div id="test"></div>
 

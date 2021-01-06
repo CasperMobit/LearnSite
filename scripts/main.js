@@ -11,7 +11,7 @@ component_Header.innerHTML = `
                 <li><a href="http://localhost:3000/layout.php">Layout</a></li>
                 <li id="nav-link-js"><a href="http://localhost:3000/javascript.php">JavaScript</a>
                     <ul class="nav-sub-menu">
-                        <li><a href="http://localhost:3000/apps/htmlencoder.php">HTML Encoder</a></li>
+                        <li><a href="http://localhost:3000/apps/html-encoder.php">HTML Encoder</a></li>
                     </ul>
                 </li>
                 <li><a href="http://localhost:3000/api.php">API Guide</a></li>
