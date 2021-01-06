@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<?php include('./components/header.html'); ?>
+<?php include('components/header.html'); ?>
 
 <div class="row" id="wrapper">
 	<div class="col-2"></div>
@@ -61,6 +61,6 @@
 	<div class="col-2"></div>
 </div>
 
-<?php include('./components/footer.html'); ?>
+<?php include('components/footer.html'); ?>
 
 </body>

@@ -6,12 +6,12 @@
 </head>
 <body>
 
-<?php include('./components/header.html'); ?>
+<?php include('components/header.html'); ?>
 
 <div id="wrapper">
 	<div class="row">
 		<div id="Hero-home" class="col-12">
-			<img src="img/Cover-hero.svg" alt="">
+			<img src="images/Cover-hero.svg" alt="">
 		</div>
 	</div>
 	<div class="row">
@@ -295,7 +295,7 @@
 	</div>
 </div>
 
-<?php include('./components/footer.html'); ?>
+<?php include('components/footer.html'); ?>
 
 <script src="scripts/main.js"></script>
 

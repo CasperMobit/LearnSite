@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<?php include('./components/header.html'); ?>
+<?php include('components/header.html'); ?>
 
 <div id="wrapper">
     <div class="row">
@@ -41,7 +41,7 @@
 </div>
 
 <!-- FOOTER -->
-<?php include('./components/footer.html'); ?>
+<?php include('components/footer.html'); ?>
 
 </body>
 </html>
