@@ -61,7 +61,7 @@
 
 			<h1 id="contCss">CSS</h1>
 			<h2>Color Palettes</h2>
-			<?php include('content/color_palettes-1.html'); ?>
+			<?php include('content/color-palettes.html'); ?>
 
 			<h1 id="contJavascript">JavaScript</h1>
 			<h2>Short-Circuit Evaluation</h2>
