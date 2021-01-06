@@ -1,5 +1,4 @@
 const component_Header = document.getElementsByTagName('header').item(0);
-const section_HTML_Heading = document.querySelector('.Heading_HTML');
 
 component_Header.innerHTML = `
 <div class="row">
@@ -23,5 +22,3 @@ component_Header.innerHTML = `
     <div class="col-2"></div>
 </div>
 `;
-
-section_HTML_Heading.textContent = 'HTML';

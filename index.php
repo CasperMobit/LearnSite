@@ -30,7 +30,7 @@
 				<li><a href="#contAdditionalResources">Additional Resources</a></li>
 			</ul>
 
-			<h1 class="Heading_HTML" id="contHtml"></h1>
+			<h1 id="contHtml">HTML</h1>
 			<h2>1 Structure</h2>
 			<div class="codeBlock">&lt;&#33;DOCTYPE&#32;html&gt;<br>&lt;html&gt;<br><span style="margin-left:2rem;">&lt;head&gt;</span><br><span style="margin-left:4rem;">&lt;title&gt;LearnSite&lt;&#47;title&gt;</span><br><span style="margin-left:2rem;">&lt;&#47;head&gt;</span><br><span style="margin-left:2rem;">&lt;body&gt;</span><br><span style="margin-left:4rem;">&lt;h1&gt;Welcome&#32;to&#32;LearnSite&lt;&#47;h1&gt;</span><br><span style="margin-left:2rem;">&lt;&#47;body&gt;</span><br>&lt;&#47;html&gt;</div>
 			<p>The opening <code>&lt;html&gt;</code> tag indicates that anything between it and a closing <code>&lt;/html&gt;</code> tag is HTML code.</p>
