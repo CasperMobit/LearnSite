@@ -200,11 +200,11 @@
 }
 @mixin ViewPort($size) {
 	@if $size == 'lg' {
-		@media screen and (min-width: 1200px) {
+		@media screen and (min-width: 1300px) {
 			@content;
 		}
 	} @else if $size == 'md' {
-		@media screen and (max-width: 1199px) {
+		@media screen and (max-width: 1299px) {
 			@content;
 		}
 	} @else if $size == 'sm' {

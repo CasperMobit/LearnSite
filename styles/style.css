@@ -72,6 +72,8 @@ nav a {
 }
 
 #HamBrgBtn {
+  height: 2rem;
+  width: 2rem;
   background-color: #43467F;
   border-color: #FFFFFF;
   border-style: solid;
@@ -79,9 +81,7 @@ nav a {
   color: #FFFFFF;
   cursor: pointer;
   display: none;
-  height: 2rem;
   margin-right: 1rem;
-  width: 2rem;
 }
 
 #HamBrgMenu {
@@ -229,7 +229,7 @@ textarea, pre {
   width: 100%;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1299px) {
   #wrapper .content {
     padding: 1rem 4rem;
   }
@@ -326,7 +326,7 @@ footer {
   width: 100%;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1299px) {
   .col-2 {
     width: 8.33333%;
   }
@@ -452,24 +452,6 @@ p.meta {
   }
 }
 
-pre {
-  background-color: #DFE3E8;
-  border-radius: .6em;
-  display: block;
-  line-height: 1.4;
-  padding: 1em;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-@media screen and (max-width: 767px) {
-  pre {
-    border-radius: 0;
-    font-size: .6em;
-  }
-}
-
 hr {
   border-color: #F9FAFB;
   color: #F9FAFB;
@@ -589,4 +571,3 @@ ul.noStyle, ol.noStyle, dl.noStyle {
 .hasBorder {
   border: 1px solid #d42cbe;
 }
-/*# sourceMappingURL=style.css.map */
