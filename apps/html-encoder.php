@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<title>HTML Encoder | LearnSite</title>
-	<?php require('../components/headContent.html');?>
+	<?php require('../components/head-content.html');?>
 </head>
 <body>
 

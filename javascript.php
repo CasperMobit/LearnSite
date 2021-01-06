@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<title>JavaScript | LearnSite</title>
-	<?php require('components/headContent.html');?>
+	<?php require('components/head-content.html');?>
 </head>
 <body>
 
