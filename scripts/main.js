@@ -1,24 +1,42 @@
-const component_Header = document.getElementsByTagName('header').item(0);
+function includeHTML() {
+    var z, i, elmnt, file, xhttp, tmp;
+    /* Loop through a collection of all HTML elements: */
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("include-file");
+        if (file) {
+            tmp = elmnt.innerHTML; // Store code already present within element
+            /* Make an HTTP request using the attribute value as the file name: */
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {elmnt.innerHTML = this.responseText + tmp;} // +tmp inserts code already present within element
+                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                    /* Remove the attribute, and call this function once more: */
+                    elmnt.removeAttribute("include-file");
+                    includeHTML();
+                }
+            }
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            file.innerHTML += tmp;
+            /* Exit the function: */
+            return;
+        }
+    }
+}
 
-component_Header.innerHTML = `
-<div class="row">
-    <div class="col-2"></div>
-    <div class="col-8 content">
-        <nav>
-            <span id="Logo"><a href="http://localhost:3000/index.php">LearnSite</a></span>
-            <ul class="nav-links">
-                <li><a href="http://localhost:3000/index.php">Home</a></li>
-                <li><a href="http://localhost:3000/layout.php">Layout</a></li>
-                <li id="nav-link-js"><a href="http://localhost:3000/javascript.php">JavaScript</a>
-                    <ul class="nav-sub-menu">
-                        <li><a href="http://localhost:3000/apps/html-encoder.php">HTML Encoder</a></li>
-                    </ul>
-                </li>
-                <li><a href="http://localhost:3000/api.php">API Guide</a></li>
-                <button id="HamBrgBtn" onclick="ShowHamburgerMenu()">=</button>
-            </ul>
-        </nav>
-    </div>
-    <div class="col-2"></div>
-</div>
-`;
+function ShowHamburgerMenu() {
+	document.getElementById("HamBrgMenu").classList.toggle("show");
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+	if (!event.target.matches('#HamBrgBtn')) {
+		var dropdown = document.getElementById("HamBrgMenu");
+		if (dropdown.classList.contains('show')) {
+			dropdown.classList.remove('show');
+		}
+	}
+}

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head include-file="components/head-content.html">
 	<title>JavaScript | LearnSite</title>
-	<?php require('components/head-content.html');?>
 </head>
 <body>
 
-<header id="Header"></header>
+<div include-file="components/header.html"></div>
 
 <div id="wrapper">
 	<div class="row">
@@ -67,7 +66,7 @@
 
 			<h1 id="contExamples">Examples</h1>
 
-			<p>Check out my <a href="apps/html-encoder.php">HTML Encoder</a></p>
+			<p>Check out my <a href="apps/html-encoder.html">HTML Encoder</a></p>
 
 			<div id="test"></div>
 
@@ -84,10 +83,13 @@
 </div>
 
 <!-- FOOTER -->
-<?php include('components/footer.html'); ?>
+<div include-file="components/footer.html"></div>
 
 <!-- Load JavaScript -->
 <script src="scripts/javascript-page.js"></script>
 <script src="scripts/main.js"></script>
+<script>
+	includeHTML();
+</script>
 </body>
 </html>

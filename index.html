@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head include-file="components/head-content.html">
 	<title>Home | LearnSite</title>
-	<?php require('components/head-content.html');?>
 </head>
 <body>
 
-<?php include('components/header.html'); ?>
+<div include-file="components/header.html"></div>
 
 <div id="wrapper">
 	<div class="row">
@@ -61,7 +60,7 @@
 
 			<h1 id="contCss">CSS</h1>
 			<h2>Color Palettes</h2>
-			<?php include('content/color-palettes.html'); ?>
+			<div include-file="content/color-palettes.html"></div>
 
 			<h1 id="contJavascript">JavaScript</h1>
 			<h2>Short-Circuit Evaluation</h2>
@@ -295,9 +294,11 @@
 	</div>
 </div>
 
-<?php include('components/footer.html'); ?>
+<div include-file="components/footer.html"></div>
 
 <script src="scripts/main.js"></script>
-
+<script>
+	includeHTML();
+</script>
 </body>
 </html>

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head include-file="components/head-content.html">
 	<title>Layout | LearnSite</title>
-	<?php require('components/head-content.html');?>
 </head>
 <body>
 
-<?php include('components/header.html'); ?>
+<div include-file="components/header.html"></div>
 
 <div class="row" id="wrapper">
 	<div class="col-2"></div>
@@ -61,6 +60,10 @@
 	<div class="col-2"></div>
 </div>
 
-<?php include('components/footer.html'); ?>
+<div include-file="components/footer.html"></div>
 
+<script src="scripts/main.js"></script>
+<script>
+	includeHTML();
+</script>
 </body>
