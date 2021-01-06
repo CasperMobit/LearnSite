@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="600" viewBox="0 0 1920 600">
-  <g id="Hero_Image" data-name="Hero Image" transform="translate(0 -100)">
-    <rect id="BG" width="1920" height="600" transform="translate(0 100)" fill="#1e1e1e"/>
-    <text id="console.log_Hello_World_" data-name="console.log(“Hello World!”);" transform="translate(960 421)" fill="#9cdcfe" font-size="60" font-family="Menlo-Regular, Menlo"><tspan x="-505.723" y="0">console</tspan><tspan y="0" fill="#f4f6f8">.</tspan><tspan y="0" fill="#dcdcaa">log</tspan><tspan y="0" fill="#f4f6f8">(</tspan><tspan y="0" fill="#ce9178">“Hello World!”</tspan><tspan y="0" fill="#f4f6f8">);</tspan></text>
-  </g>
-</svg>
