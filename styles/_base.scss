@@ -87,22 +87,6 @@ textarea, pre {
 	margin-top: 0 !important;
 }
 
-#AsciiTable {
-	border-collapse: collapse;
-	td:last-child {
-		min-width: 12rem;
-	}
-	td:first-child {
-		min-width: 12rem;
-		padding-left: .2rem;
-	}
-	th {
-		min-width: 6rem;
-	}
-	tr:hover {
-		background-color: Color('sky', 'light');
-	}
-}
 #wrapper {
 	padding: Array($padding, 'wrapper', 'top') Array($padding, 'wrapper', 'right') Array($padding, 'wrapper', 'bottom') Array($padding, 'wrapper', 'left');
 	.content {

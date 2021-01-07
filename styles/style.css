@@ -1,3 +1,4 @@
+@use "sass:map";
 header {
   background-color: #43467F;
   color: white;
@@ -194,27 +195,6 @@ textarea, pre {
   margin-top: 0 !important;
 }
 
-#AsciiTable {
-  border-collapse: collapse;
-}
-
-#AsciiTable td:last-child {
-  min-width: 12rem;
-}
-
-#AsciiTable td:first-child {
-  min-width: 12rem;
-  padding-left: .2rem;
-}
-
-#AsciiTable th {
-  min-width: 6rem;
-}
-
-#AsciiTable tr:hover {
-  background-color: #F4F6F8;
-}
-
 #wrapper {
   padding: 0rem 0rem 2rem 0rem;
 }
@@ -377,6 +357,70 @@ footer {
   .col-6, .col-8 {
     width: 100%;
   }
+}
+
+table {
+  border-collapse: collapse;
+  padding: 0;
+  /* every other cell */
+}
+
+table.cell-border th,
+table.cell-border td {
+  border: 0.1px solid #C4CDD5;
+}
+
+table.round-corners {
+  border-radius: 0.3rem;
+}
+
+table.round-corners .top-left-cell {
+  border-top-left-radius: 0.3rem;
+}
+
+table.round-corners .top-right-cell {
+  border-top-right-radius: 0.3rem;
+}
+
+table.round-corners .bottom-left-cell {
+  border-bottom-left-radius: 0.3rem;
+}
+
+table.round-corners .bottom-right-cell {
+  border-bottom-right-radius: 0.3rem;
+}
+
+table.separate {
+  border-collapse: separate;
+}
+
+table.border,
+table .border {
+  border: 1px solid #C4CDD5;
+}
+
+table th, table td {
+  padding: 0.3rem 0.4rem;
+}
+
+table thead.dark {
+  background-color: #43467F;
+  color: white;
+}
+
+table tr.even td,
+table tr.even th {
+  background-color: #F4F6F8;
+}
+
+#AsciiTable tr:hover td,
+#AsciiTable tr:hover th {
+  background-color: #B3BCF5;
+  color: #3E4155;
+}
+
+#responsive-size-table {
+  border-radius: .3rem;
 }
 
 /*
@@ -557,28 +601,6 @@ ul.noStyle, ol.noStyle, dl.noStyle {
 .ColorPaletteValue {
   text-align: right;
   white-space: nowrap;
-}
-
-#CSS-Selectors {
-  background: #C4CDD5;
-  border-collapse: collapse;
-  text-align: left;
-  width: 100%;
-}
-
-#CSS-Selectors th {
-  border-bottom: 2pt solid black;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-#CSS-Selectors td {
-  vertical-align: top;
-}
-
-#CSS-Selectors td:first-child {
-  font-size: 10pt;
-  text-transform: uppercase;
 }
 
 /* TESTING PROPERTIES */

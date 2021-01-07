@@ -13,34 +13,42 @@
 		<h1>Layout</h1>
 		<p class="meta">This layout was made using CSS only!</p>
 		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+
 		<h2>Size Guide</h2>
-		<table>
-			<tr>
-				<th>Value</th>
-				<th>Device</th>
-				<th>Size</th>
-			</tr>
-			<tr>
-				<td>xs</td>
-				<td>Phones</td>
-				<td>Screens less than 768px wide</td>
-			</tr>
-			<tr>
-				<td>sm</td>
-				<td>Tablets</td>
-				<td>Screens less than 992px wide</td>
-			</tr>
-			<tr>
-				<td>md</td>
-				<td>Small laptops</td>
-				<td>Screens less than 1300px wide</td>
-			</tr>
-			<tr>
-				<td>lg</td>
-				<td>Lap- and desktops</td>
-				<td>Screens equal to or greater than 1300px wide</td>
-			</tr>
+		<table id="responsive-size-table" class="round-corners border">
+			<thead class="border dark" style="text-align: left;">
+				<tr>
+					<th class="top-left-cell">Value</th>
+					<th>Device</th>
+					<th class="top-right-cell">Size</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>xs</th>
+					<td>Phones</td>
+					<td>Screens less than 768px wide</td>
+				</tr>
+				<tr>
+					<th>sm</th>
+					<td>Tablets</td>
+					<td>Screens less than 992px wide</td>
+				</tr>
+				<tr>
+					<th>md</th>
+					<td>Small laptops</td>
+					<td>Screens less than 1300px wide</td>
+				</tr>
+				<tr>
+					<th class="bottom-left-cell">lg</th>
+					<td>Lap- and desktops</td>
+					<td class="bottom-right-cell">Screens equal to or greater than 1300px wide</td>
+				</tr>
+			</tbody>
 		</table>
+
+
 		<h2>Sass</h2>
 		<h3>Making Arrays</h3>
 		<p>Function structure:</p>

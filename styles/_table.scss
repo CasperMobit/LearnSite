@@ -1,0 +1,68 @@
+// _table.scss
+
+$border-radius: (
+	"table": .3rem
+);
+$padding: (
+	"cells": .3rem .4rem,
+	"table": 0
+);
+
+table {
+	border-collapse: collapse;
+	padding: Array($padding, "table");
+	&.cell-border {
+		th,
+		td {
+			border: .1px solid Color('sky', 'dark');
+		}
+	}
+	&.round-corners {
+		border-radius: Array($border-radius, "table");
+		.top-left-cell {
+			border-top-left-radius: Array($border-radius, "table");
+		}
+		.top-right-cell {
+			border-top-right-radius: Array($border-radius, "table");
+		}
+		.bottom-left-cell {
+			border-bottom-left-radius: Array($border-radius, "table");
+		}
+		.bottom-right-cell {
+			border-bottom-right-radius: Array($border-radius, "table");
+		}
+	}
+	&.separate {
+		border-collapse: separate;
+	}
+	&.border,
+	& .border {
+		border: 1px solid Color('sky', 'dark');
+	}
+
+	th, td {
+		padding: Array($padding, "cells");
+	}
+	thead {
+		&.dark {
+			background-color: Color('main');
+			color: white;
+		}
+	}
+	/* every other cell */
+	tr.even td,
+	tr.even th {
+		background-color: Color('sky', 'light');
+	}
+}
+
+#AsciiTable {
+	tr:hover td,
+	tr:hover th {
+		background-color: Color('blue', 'light');
+		color: Color('blue', 'text');
+	}
+}
+#responsive-size-table {
+	border-radius: .3rem;
+}
